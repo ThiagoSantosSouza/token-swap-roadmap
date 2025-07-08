@@ -86,14 +86,20 @@ const PersonasSlide = () => (
       {/* Main Profile Card - Inspired by the uploaded design */}
       <div className="col-span-2 flex justify-center items-start">
         <div className="relative">
-          {/* Glow effect background */}
-          <div className="absolute inset-0 bg-gradient-accent opacity-20 blur-xl rounded-3xl"></div>
+          {/* Outer glow effect */}
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 opacity-30 blur-2xl rounded-3xl scale-110"></div>
           
           {/* Main card with neon border effect */}
-          <div className="relative bg-gradient-to-br from-background via-card to-background border-2 border-transparent bg-clip-padding rounded-3xl p-8 text-center min-w-[300px]">
-            {/* Neon border overlay */}
-            <div className="absolute inset-0 rounded-3xl bg-gradient-accent opacity-50 -z-10"></div>
-            <div className="absolute inset-[2px] rounded-3xl bg-gradient-to-br from-background via-card to-background"></div>
+          <div className="relative bg-gradient-to-br from-background via-card to-background rounded-3xl p-8 text-center min-w-[300px]">
+            {/* Triple neon border effect */}
+            <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 p-[3px]">
+              <div className="absolute inset-[3px] rounded-3xl bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 p-[2px]">
+                <div className="absolute inset-[2px] rounded-3xl bg-gradient-to-br from-background via-card to-background"></div>
+              </div>
+            </div>
+            
+            {/* Inner glow */}
+            <div className="absolute inset-[6px] rounded-3xl bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-blue-500/10"></div>
             
             {/* Content */}
             <div className="relative z-10 space-y-6">
