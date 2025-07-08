@@ -77,56 +77,86 @@ const ProblemSlide = () => (
 );
 
 const PersonasSlide = () => (
-  <div className="space-y-6">
-    <h2 className="text-3xl font-bold text-center mb-8">Personas - Desenvolvedores do Projeto</h2>
-    <div className="grid grid-cols-2 gap-6">
-      <Card className="p-6 bg-card border-border">
-        <div className="flex items-center mb-4">
-          <User className="w-8 h-8 mr-3 text-primary" />
-          <div>
-            <h3 className="text-lg font-semibold">João Silva</h3>
-            <p className="text-sm text-muted-foreground">28 anos - Desenvolvedor Blockchain</p>
+  <div className="space-y-8">
+    <h2 className="text-3xl font-bold text-left mb-8 text-primary">Personas</h2>
+    
+    <div className="grid grid-cols-3 gap-6 h-full">
+      {/* Main Profile Section */}
+      <div className="col-span-1 space-y-6">
+        <Card className="p-6 bg-card/50 border-primary/20">
+          <div className="space-y-4">
+            <div className="w-20 h-20 bg-gradient-accent rounded-lg flex items-center justify-center mb-4">
+              <User className="w-10 h-10 text-white" />
+            </div>
+            <div className="space-y-2">
+              <div className="text-sm text-muted-foreground">Nome:</div>
+              <div className="text-lg font-semibold text-foreground">Luan Ferreira</div>
+              
+              <div className="text-sm text-muted-foreground">Idade:</div>
+              <div className="text-lg font-semibold text-foreground">30 anos</div>
+              
+              <div className="text-sm text-muted-foreground">Profissão:</div>
+              <div className="text-lg font-semibold text-foreground">AI&Blockchain Entrepreneur</div>
+            </div>
           </div>
-        </div>
-        <div className="space-y-3">
-          <div>
-            <h4 className="font-semibold text-primary">Perfil</h4>
-            <p className="text-sm">Especialista em Solidity com 3+ anos em DeFi</p>
+        </Card>
+        
+        <Card className="p-6 bg-card/50 border-primary/20">
+          <div className="space-y-3">
+            <h4 className="text-lg font-semibold text-primary border-b border-primary pb-2">Perfil</h4>
+            <p className="text-sm text-card-foreground leading-relaxed">
+              Empreendo há anos com foco em soluções baseadas em blockchain e inteligência artificial. 
+              No hackaton, atuo como gestor do projeto, responsável pela visão de experiência do usuário, 
+              acompanhamento das entregas e apoio no front-end. Organizo as prioridades para que a equipe 
+              mantenha o foco e a fluidez entre as etapas.
+            </p>
           </div>
-          <div>
-            <h4 className="font-semibold text-primary">Motivações</h4>
-            <p className="text-sm">Criar soluções DeFi inovadoras e seguras</p>
+        </Card>
+      </div>
+
+      {/* Info Cards Grid */}
+      <div className="col-span-2 grid grid-cols-2 gap-4">
+        <Card className="p-6 bg-card/50 border-primary/20">
+          <div className="space-y-3">
+            <h4 className="text-lg font-semibold text-primary">Motivações e Objetivos</h4>
+            <p className="text-sm text-card-foreground leading-relaxed">
+              Quero aplicar minha bagagem em tecnologia e produto para entregar uma solução funcional, 
+              clara e eficiente, que resolva o problema proposto de forma completa, dentro do tempo e 
+              escopo do desafio.
+            </p>
           </div>
-          <div>
-            <h4 className="font-semibold text-primary">Expectativas</h4>
-            <p className="text-sm">Desenvolver contratos auditáveis e eficientes</p>
+        </Card>
+
+        <Card className="p-6 bg-card/50 border-primary/20">
+          <div className="space-y-3">
+            <h4 className="text-lg font-semibold text-primary">Interesse</h4>
+            <p className="text-sm text-card-foreground leading-relaxed">
+              Tenho interesse em unir tecnologias emergentes com foco em usabilidade e impacto direto. 
+              Busco simplificar o complexo e garantir que a tecnologia entregue valor real para quem vai usar.
+            </p>
           </div>
-        </div>
-      </Card>
-      
-      <Card className="p-6 bg-card border-border">
-        <div className="flex items-center mb-4">
-          <User className="w-8 h-8 mr-3 text-primary" />
-          <div>
-            <h3 className="text-lg font-semibold">Ana Costa</h3>
-            <p className="text-sm text-muted-foreground">26 anos - Frontend Developer</p>
+        </Card>
+
+        <Card className="p-6 bg-card/50 border-primary/20">
+          <div className="space-y-3">
+            <h4 className="text-lg font-semibold text-primary">Desafio</h4>
+            <p className="text-sm text-card-foreground leading-relaxed">
+              Transformar ideias e requisitos técnicos em uma solução enxuta, bem pensada e com experiência 
+              fluida. Organizar as entregas sem perder de vista o objetivo central do desafio.
+            </p>
           </div>
-        </div>
-        <div className="space-y-3">
-          <div>
-            <h4 className="font-semibold text-primary">Perfil</h4>
-            <p className="text-sm">Expert React/TypeScript focada em UX/UI</p>
+        </Card>
+
+        <Card className="p-6 bg-card/50 border-primary/20">
+          <div className="space-y-3">
+            <h4 className="text-lg font-semibold text-primary">Expectativa</h4>
+            <p className="text-sm text-card-foreground leading-relaxed">
+              Entregar, junto com a equipe, uma solução sólida, bem estruturada e totalmente alinhada ao 
+              problema apresentado — do código ao uso final.
+            </p>
           </div>
-          <div>
-            <h4 className="font-semibold text-primary">Motivações</h4>
-            <p className="text-sm">Tornar DeFi acessível para todos os usuários</p>
-          </div>
-          <div>
-            <h4 className="font-semibold text-primary">Expectativas</h4>
-            <p className="text-sm">Interface intuitiva e responsiva</p>
-          </div>
-        </div>
-      </Card>
+        </Card>
+      </div>
     </div>
   </div>
 );
