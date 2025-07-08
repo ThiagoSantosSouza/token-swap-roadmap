@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { ChevronLeft, ChevronRight, User } from 'lucide-react';
-import { ImageProcessor } from './ImageProcessor';
 
 const slides = [
   {
@@ -12,7 +11,7 @@ const slides = [
   },
   {
     id: 2,
-    title: "Descrição do Problema", 
+    title: "Descrição do Problema",
     component: "ProblemSlide"
   },
   {
@@ -83,14 +82,9 @@ const PersonasSlide = () => (
       Equipe de Desenvolvimento
     </h2>
     
-    <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 h-full">
-      {/* Image Processor Section */}
-      <div className="lg:col-span-5 mb-8">
-        <ImageProcessor />
-      </div>
-      
-      {/* Main Profile Card */}
-      <div className="lg:col-span-2 flex justify-center items-start">
+    <div className="grid grid-cols-5 gap-8 h-full">
+      {/* Main Profile Card - Inspired by the uploaded design */}
+      <div className="col-span-2 flex justify-center items-start">
         <div className="relative">
           {/* Outer glow effect */}
           <div className="absolute inset-0 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 opacity-30 blur-2xl rounded-3xl scale-110"></div>
@@ -109,16 +103,12 @@ const PersonasSlide = () => (
             
             {/* Content */}
             <div className="relative z-10 space-y-6">
-              {/* Avatar photo with enhanced neon effects */}
-              <div className="w-24 h-24 mx-auto rounded-2xl overflow-hidden relative">
-                {/* Multiple glow layers for enhanced neon effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 opacity-50 blur-xl rounded-2xl scale-110"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 opacity-30 blur-lg rounded-2xl scale-105"></div>
-                <div className="absolute inset-0 border-2 border-white/30 rounded-2xl"></div>
+              {/* Avatar photo */}
+              <div className="w-24 h-24 mx-auto rounded-2xl overflow-hidden shadow-glow border-2 border-white/20">
                 <img 
                   src="/lovable-uploads/30d0d975-6484-4091-ac6f-453858d80425.png" 
                   alt="Luan Ferreira" 
-                  className="relative w-full h-full object-cover rounded-2xl filter brightness-110 contrast-110"
+                  className="w-full h-full object-cover"
                 />
               </div>
               
@@ -136,8 +126,8 @@ const PersonasSlide = () => (
         </div>
       </div>
 
-      {/* Info Cards Grid */}
-      <div className="lg:col-span-3 grid grid-cols-1 md:grid-cols-2 gap-6">
+      {/* Info Cards Grid - Clean contrast design */}
+      <div className="col-span-3 grid grid-cols-2 gap-6">
         <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-6 hover:bg-card/50 transition-all duration-300">
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
@@ -191,7 +181,7 @@ const PersonasSlide = () => (
           </div>
         </div>
 
-        <div className="col-span-full bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-6 hover:bg-card/50 transition-all duration-300">
+        <div className="col-span-2 bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-6 hover:bg-card/50 transition-all duration-300">
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="w-1 h-6 bg-gradient-accent rounded-full"></div>
