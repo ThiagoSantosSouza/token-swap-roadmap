@@ -103,9 +103,13 @@ const PersonasSlide = () => (
             
             {/* Content */}
             <div className="relative z-10 space-y-6">
-              {/* Icon with phoenix/wings effect */}
-              <div className="w-24 h-24 mx-auto bg-gradient-accent rounded-2xl flex items-center justify-center shadow-glow">
-                <User className="w-12 h-12 text-white" />
+              {/* Avatar photo */}
+              <div className="w-24 h-24 mx-auto rounded-2xl overflow-hidden shadow-glow border-2 border-white/20">
+                <img 
+                  src="/lovable-uploads/30d0d975-6484-4091-ac6f-453858d80425.png" 
+                  alt="Luan Ferreira" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               
               <div className="space-y-4">
