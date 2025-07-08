@@ -198,54 +198,213 @@ const PersonasSlide = () => (
   </div>
 );
 
-const UserStoriesSlide = () => (
-  <div className="space-y-6">
-    <h2 className="text-3xl font-bold text-center mb-8">User Stories/Tarefas</h2>
-    <div className="grid gap-4">
-      {[
-        "Como usuário, quero conectar minha carteira para acessar a plataforma",
-        "Como usuário, quero fazer swap entre diferentes tokens de forma segura",
-        "Como usuário, quero visualizar o histórico de minhas transações",
-        "Como usuário, quero acompanhar o volume de swaps em tempo real",
-        "Como desenvolvedor, quero implementar oráculos para preços precisos",
-        "Como desenvolvedor, quero criar testes unitários abrangentes",
-        "Como equipe, queremos documentar toda a arquitetura no GitBook"
-      ].map((story, index) => (
-        <Card key={index} className="p-4 bg-card border-border">
-          <p className="text-card-foreground">{story}</p>
-        </Card>
-      ))}
-    </div>
-  </div>
-);
+const UserStoriesSlide = () => {
+  const userStories = [
+    {
+      category: "Conexão e Autenticação",
+      icon: "🔗",
+      color: "from-blue-500 to-cyan-400",
+      stories: [
+        "Como usuário, quero conectar minha carteira Web3 de forma segura e intuitiva",
+        "Como usuário, quero visualizar meu saldo e assets de forma clara no dashboard"
+      ]
+    },
+    {
+      category: "Operações de Swap",
+      icon: "🔄",
+      color: "from-green-500 to-emerald-400",
+      stories: [
+        "Como usuário, quero realizar swaps de tokens com taxas transparentes",
+        "Como usuário, quero receber estimativas precisas antes de confirmar transações",
+        "Como usuário, quero acompanhar o status das minhas transações em tempo real"
+      ]
+    },
+    {
+      category: "Monitoramento e Histórico",
+      icon: "📊",
+      color: "from-purple-500 to-pink-400",
+      stories: [
+        "Como usuário, quero visualizar meu histórico completo de transações",
+        "Como usuário, quero acompanhar preços de tokens em tempo real",
+        "Como usuário, quero receber notificações sobre mudanças importantes"
+      ]
+    },
+    {
+      category: "Desenvolvimento Técnico",
+      icon: "⚙️",
+      color: "from-orange-500 to-red-400",
+      stories: [
+        "Como desenvolvedor, quero integrar oráculos de preço confiáveis",
+        "Como desenvolvedor, quero implementar testes automatizados abrangentes",
+        "Como equipe, queremos documentar todas as APIs e contratos"
+      ]
+    }
+  ];
 
-const DefinitionOfDoneSlide = () => (
-  <div className="space-y-6">
-    <h2 className="text-3xl font-bold text-center mb-8">Definição de Feito</h2>
-    <div className="grid gap-4">
-      {[
-        "✅ Código revisado e aprovado pelo time",
-        "✅ Testes unitários implementados e passando",
-        "✅ Documentação técnica atualizada no GitBook",
-        "✅ Deploy realizado na testnet",
-        "✅ Funcionalidade testada end-to-end",
-        "✅ Interface responsiva e acessível",
-        "✅ Integração com Chainlink funcionando",
-        "✅ Validações de segurança implementadas"
-      ].map((criteria, index) => (
-        <Card key={index} className="p-4 bg-card border-border">
-          <p className="text-card-foreground">{criteria}</p>
-        </Card>
-      ))}
+  return (
+    <div className="space-y-8">
+      <div className="text-center space-y-4">
+        <h2 className="text-4xl font-bold bg-gradient-accent bg-clip-text text-transparent">
+          Lista de User Stories/Tarefas
+        </h2>
+        <div className="w-24 h-1 bg-gradient-accent mx-auto rounded-full"></div>
+      </div>
+      
+      <div className="grid grid-cols-2 gap-8">
+        {userStories.map((category, categoryIndex) => (
+          <div key={categoryIndex} className="relative group">
+            {/* Outer glow effect */}
+            <div className={`absolute inset-0 bg-gradient-to-r ${category.color} opacity-20 blur-xl rounded-2xl scale-105 group-hover:opacity-30 transition-opacity duration-500`}></div>
+            
+            {/* Main container */}
+            <div className="relative bg-gradient-to-br from-background/80 via-card/60 to-background/80 backdrop-blur-sm border border-border/30 rounded-2xl p-6 h-full">
+              {/* Animated border */}
+              <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${category.color} p-[2px] opacity-60`}>
+                <div className="absolute inset-[2px] rounded-2xl bg-gradient-to-br from-background via-card to-background"></div>
+              </div>
+              
+              {/* Content */}
+              <div className="relative z-10 space-y-6">
+                {/* Header */}
+                <div className="flex items-center space-x-3">
+                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-r ${category.color} flex items-center justify-center text-2xl shadow-lg`}>
+                    {category.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-foreground">{category.category}</h3>
+                    <div className={`w-16 h-0.5 bg-gradient-to-r ${category.color} rounded-full mt-1`}></div>
+                  </div>
+                </div>
+
+                {/* Stories */}
+                <div className="space-y-3">
+                  {category.stories.map((story, storyIndex) => (
+                    <div key={storyIndex} className="flex items-start space-x-3 group/story">
+                      <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${category.color} mt-2 group-hover/story:scale-125 transition-transform duration-200`}></div>
+                      <p className="text-sm text-card-foreground/90 leading-relaxed group-hover/story:text-foreground transition-colors duration-200">
+                        {story}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
+};
+
+const DefinitionOfDoneSlide = () => {
+  const doneChecklist = [
+    {
+      category: "Qualidade de Código",
+      icon: "🛡️",
+      color: "from-emerald-500 via-green-400 to-teal-500",
+      criteria: [
+        "Código revisado e aprovado pelo time",
+        "Testes unitários implementados e passando", 
+        "Cobertura de testes acima de 80%"
+      ]
+    },
+    {
+      category: "Documentação",
+      icon: "📚",
+      color: "from-blue-500 via-indigo-400 to-purple-500",
+      criteria: [
+        "Documentação técnica atualizada no GitBook",
+        "APIs documentadas com exemplos",
+        "Readme atualizado com instruções"
+      ]
+    },
+    {
+      category: "Deploy e Infraestrutura",
+      icon: "🚀",
+      color: "from-orange-500 via-red-400 to-pink-500",
+      criteria: [
+        "Deploy realizado na testnet",
+        "Smart contracts verificados",
+        "Frontend hospedado e funcional"
+      ]
+    },
+    {
+      category: "Testes e Validação",
+      icon: "⚡",
+      color: "from-cyan-500 via-blue-400 to-indigo-500",
+      criteria: [
+        "Funcionalidade testada end-to-end",
+        "Interface responsiva e acessível",
+        "Integração com Chainlink funcionando",
+        "Validações de segurança implementadas"
+      ]
+    }
+  ];
+
+  return (
+    <div className="space-y-8">
+      <div className="text-center space-y-4">
+        <h2 className="text-4xl font-bold bg-gradient-accent bg-clip-text text-transparent">
+          Definição de Feito
+        </h2>
+        <div className="w-24 h-1 bg-gradient-accent mx-auto rounded-full"></div>
+        <p className="text-muted-foreground">Critérios de Aceitação para Cada Entrega</p>
+      </div>
+      
+      <div className="grid grid-cols-2 gap-6">
+        {doneChecklist.map((section, sectionIndex) => (
+          <div key={sectionIndex} className="relative group">
+            {/* Holographic glow */}
+            <div className={`absolute inset-0 bg-gradient-to-r ${section.color} opacity-20 blur-2xl rounded-3xl scale-110 group-hover:opacity-30 transition-all duration-700`}></div>
+            
+            {/* Main card */}
+            <div className="relative bg-gradient-to-br from-background/90 via-card/70 to-background/90 backdrop-blur-sm border border-border/40 rounded-3xl p-6 h-full">
+              {/* Animated border effect */}
+              <div className={`absolute inset-0 rounded-3xl bg-gradient-to-r ${section.color} p-[2px] opacity-70 group-hover:opacity-100 transition-opacity duration-500`}>
+                <div className="absolute inset-[2px] rounded-3xl bg-gradient-to-br from-background via-card to-background"></div>
+              </div>
+              
+              {/* Inner glow */}
+              <div className={`absolute inset-[6px] rounded-3xl bg-gradient-to-r ${section.color} opacity-5 group-hover:opacity-10 transition-opacity duration-500`}></div>
+              
+              {/* Content */}
+              <div className="relative z-10 space-y-6">
+                {/* Header with icon */}
+                <div className="text-center space-y-3">
+                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${section.color} flex items-center justify-center text-3xl mx-auto shadow-2xl group-hover:scale-110 transition-transform duration-300`}>
+                    {section.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-foreground">{section.category}</h3>
+                  <div className={`w-12 h-0.5 bg-gradient-to-r ${section.color} rounded-full mx-auto`}></div>
+                </div>
+
+                {/* Criteria list */}
+                <div className="space-y-4">
+                  {section.criteria.map((criteria, criteriaIndex) => (
+                    <div key={criteriaIndex} className="flex items-start space-x-3 group/criteria">
+                      {/* Animated checkmark */}
+                      <div className={`w-6 h-6 rounded-lg bg-gradient-to-r ${section.color} flex items-center justify-center mt-0.5 group-hover/criteria:scale-110 transition-transform duration-200 shadow-lg`}>
+                        <span className="text-white text-xs font-bold">✓</span>
+                      </div>
+                      <p className="text-sm text-card-foreground/90 leading-relaxed group-hover/criteria:text-foreground transition-colors duration-200">
+                        {criteria}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const SprintsSlide = () => {
   const sprints = [
     {
       name: "Sprint Planning",
-      period: "08 a 11 de Julho",
       objective: "Setup e Organização",
       tasks: [
         "Definir arquitetura e tecnologias",
@@ -258,7 +417,6 @@ const SprintsSlide = () => {
     },
     {
       name: "Sprint 1",
-      period: "12 a 18 de Julho",
       objective: "Smart Contracts + Frontend Base",
       tasks: [
         "Implementar contrato base (SwapBook)",
@@ -270,7 +428,6 @@ const SprintsSlide = () => {
     },
     {
       name: "Sprint 2",
-      period: "19 a 25 de Julho",
       objective: "Integrações e Lógica de Swap",
       tasks: [
         "Integração Chainlink (oracle de preço)",
@@ -282,7 +439,6 @@ const SprintsSlide = () => {
     },
     {
       name: "Sprint 3",
-      period: "26 de Julho a 01 de Agosto",
       objective: "Dashboard + Refino de Contratos",
       tasks: [
         "Exibir volume de swaps e histórico",
@@ -294,7 +450,6 @@ const SprintsSlide = () => {
     },
     {
       name: "Sprint 4",
-      period: "02 a 07 de Agosto",
       objective: "Testes Finais + Deploy",
       tasks: [
         "Testes ponta a ponta",
@@ -307,7 +462,6 @@ const SprintsSlide = () => {
     },
     {
       name: "Sprint 5",
-      period: "08 e 09 de Agosto",
       objective: "Entrega Oficial",
       tasks: [
         "Submeter projeto na plataforma",
@@ -317,64 +471,250 @@ const SprintsSlide = () => {
     }
   ];
 
+  const sprintsFirstHalf = sprints.slice(0, 3);
+  const sprintsSecondHalf = sprints.slice(3);
+
   return (
-    <div className="space-y-6">
-      <h2 className="text-3xl font-bold text-center mb-8">Roadmap - Sprints</h2>
-      <div className="grid gap-4 max-h-96 overflow-y-auto">
-        {sprints.map((sprint, index) => (
-          <Card key={index} className="p-4 bg-card border-border">
-            <div className="flex justify-between items-start mb-3">
-              <h3 className="text-lg font-semibold text-primary">{sprint.name}</h3>
-              <span className="text-sm text-muted-foreground">{sprint.period}</span>
+    <div className="space-y-8">
+      <div className="text-center space-y-4">
+        <h2 className="text-4xl font-bold bg-gradient-accent bg-clip-text text-transparent">
+          Roadmap - Sprints
+        </h2>
+        <div className="w-24 h-1 bg-gradient-accent mx-auto rounded-full"></div>
+      </div>
+      
+      {/* First Row */}
+      <div className="grid grid-cols-3 gap-6">
+        {sprintsFirstHalf.map((sprint, index) => (
+          <div key={index} className="relative group">
+            {/* Holographic background */}
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-cyan-500/20 blur-xl rounded-2xl scale-105 group-hover:scale-110 transition-transform duration-500"></div>
+            
+            {/* Main card */}
+            <div className="relative bg-gradient-to-br from-background/80 via-card/60 to-background/80 backdrop-blur-sm border border-border/30 rounded-2xl p-6 h-full">
+              {/* Glowing border */}
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 p-[2px] opacity-60">
+                <div className="absolute inset-[2px] rounded-2xl bg-gradient-to-br from-background via-card to-background"></div>
+              </div>
+              
+              {/* Content */}
+              <div className="relative z-10 space-y-4">
+                {/* Header */}
+                <div className="text-center space-y-2">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white font-bold text-lg mx-auto">
+                    {index + 1}
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground">{sprint.name}</h3>
+                  <p className="text-sm text-primary font-medium">{sprint.objective}</p>
+                  <div className="w-16 h-0.5 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full mx-auto"></div>
+                </div>
+
+                {/* Tasks */}
+                <div className="space-y-2">
+                  {sprint.tasks.map((task, taskIndex) => (
+                    <div key={taskIndex} className="flex items-start space-x-2 group/task">
+                      <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500 mt-2 group-hover/task:scale-125 transition-transform duration-200"></div>
+                      <p className="text-xs text-card-foreground/90 leading-relaxed group-hover/task:text-foreground transition-colors duration-200">
+                        {task}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
-            <p className="text-sm font-medium mb-2 text-accent">{sprint.objective}</p>
-            <ul className="text-sm space-y-1">
-              {sprint.tasks.map((task, taskIndex) => (
-                <li key={taskIndex} className="text-card-foreground">• {task}</li>
-              ))}
-            </ul>
-          </Card>
+          </div>
+        ))}
+      </div>
+
+      {/* Second Row */}
+      <div className="grid grid-cols-3 gap-6">
+        {sprintsSecondHalf.map((sprint, index) => (
+          <div key={index + 3} className="relative group">
+            {/* Holographic background */}
+            <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 via-red-500/20 to-pink-500/20 blur-xl rounded-2xl scale-105 group-hover:scale-110 transition-transform duration-500"></div>
+            
+            {/* Main card */}
+            <div className="relative bg-gradient-to-br from-background/80 via-card/60 to-background/80 backdrop-blur-sm border border-border/30 rounded-2xl p-6 h-full">
+              {/* Glowing border */}
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 p-[2px] opacity-60">
+                <div className="absolute inset-[2px] rounded-2xl bg-gradient-to-br from-background via-card to-background"></div>
+              </div>
+              
+              {/* Content */}
+              <div className="relative z-10 space-y-4">
+                {/* Header */}
+                <div className="text-center space-y-2">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-orange-500 to-pink-500 flex items-center justify-center text-white font-bold text-lg mx-auto">
+                    {index + 4}
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground">{sprint.name}</h3>
+                  <p className="text-sm text-primary font-medium">{sprint.objective}</p>
+                  <div className="w-16 h-0.5 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full mx-auto"></div>
+                </div>
+
+                {/* Tasks */}
+                <div className="space-y-2">
+                  {sprint.tasks.map((task, taskIndex) => (
+                    <div key={taskIndex} className="flex items-start space-x-2 group/task">
+                      <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-orange-500 to-pink-500 mt-2 group-hover/task:scale-125 transition-transform duration-200"></div>
+                      <p className="text-xs text-card-foreground/90 leading-relaxed group-hover/task:text-foreground transition-colors duration-200">
+                        {task}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
         ))}
       </div>
     </div>
   );
 };
 
-const BurndownSlide = () => (
-  <div className="space-y-6">
-    <h2 className="text-3xl font-bold text-center mb-8">Burndown Chart</h2>
-    <Card className="p-6 bg-card border-border">
-      <div className="space-y-4">
-        <div className="text-center text-muted-foreground">
-          <p>Progresso estimado do projeto por sprint</p>
-        </div>
-        <div className="space-y-4">
-          {[
-            { sprint: "Sprint Planning", progress: 100, tasks: "6/6 tarefas" },
-            { sprint: "Sprint 1", progress: 85, tasks: "4/5 tarefas" },
-            { sprint: "Sprint 2", progress: 60, tasks: "3/5 tarefas" },
-            { sprint: "Sprint 3", progress: 40, tasks: "2/5 tarefas" },
-            { sprint: "Sprint 4", progress: 20, tasks: "1/6 tarefas" },
-            { sprint: "Sprint 5", progress: 0, tasks: "0/3 tarefas" }
-          ].map((item, index) => (
-            <div key={index} className="space-y-2">
-              <div className="flex justify-between text-sm">
-                <span className="text-card-foreground">{item.sprint}</span>
-                <span className="text-muted-foreground">{item.tasks}</span>
+const BurndownSlide = () => {
+  const burndownData = [
+    { 
+      sprint: "Sprint Planning", 
+      period: "08 a 11 de Julho",
+      progress: 100, 
+      status: "Concluído",
+      color: "from-emerald-500 to-green-400"
+    },
+    { 
+      sprint: "Sprint 1", 
+      period: "12 a 18 de Julho",
+      progress: 85, 
+      status: "Em Andamento",
+      color: "from-blue-500 to-cyan-400"
+    },
+    { 
+      sprint: "Sprint 2", 
+      period: "19 a 25 de Julho",
+      progress: 60, 
+      status: "Planejado",
+      color: "from-purple-500 to-pink-400"
+    },
+    { 
+      sprint: "Sprint 3", 
+      period: "26 de Julho a 01 de Agosto",
+      progress: 40, 
+      status: "Planejado",
+      color: "from-orange-500 to-red-400"
+    },
+    { 
+      sprint: "Sprint 4", 
+      period: "02 a 07 de Agosto",
+      progress: 20, 
+      status: "Futuro",
+      color: "from-indigo-500 to-purple-400"
+    },
+    { 
+      sprint: "Sprint 5", 
+      period: "08 e 09 de Agosto",
+      progress: 0, 
+      status: "Futuro",
+      color: "from-pink-500 to-rose-400"
+    }
+  ];
+
+  return (
+    <div className="space-y-8">
+      <div className="text-center space-y-4">
+        <h2 className="text-4xl font-bold bg-gradient-accent bg-clip-text text-transparent">
+          Cronograma & Progresso
+        </h2>
+        <div className="w-24 h-1 bg-gradient-accent mx-auto rounded-full"></div>
+        <p className="text-muted-foreground">Timeline de Desenvolvimento com Datas e Status</p>
+      </div>
+      
+      <div className="grid grid-cols-2 gap-6">
+        {burndownData.map((item, index) => (
+          <div key={index} className="relative group">
+            {/* Holographic glow */}
+            <div className={`absolute inset-0 bg-gradient-to-r ${item.color} opacity-20 blur-xl rounded-2xl scale-105 group-hover:opacity-30 transition-all duration-500`}></div>
+            
+            {/* Main container */}
+            <div className="relative bg-gradient-to-br from-background/90 via-card/70 to-background/90 backdrop-blur-sm border border-border/40 rounded-2xl p-6">
+              {/* Animated border */}
+              <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${item.color} p-[2px] opacity-60 group-hover:opacity-100 transition-opacity duration-500`}>
+                <div className="absolute inset-[2px] rounded-2xl bg-gradient-to-br from-background via-card to-background"></div>
               </div>
-              <div className="w-full bg-secondary rounded-full h-3">
-                <div 
-                  className="bg-gradient-accent h-3 rounded-full transition-all duration-300"
-                  style={{ width: `${item.progress}%` }}
-                ></div>
+              
+              {/* Content */}
+              <div className="relative z-10 space-y-6">
+                {/* Header */}
+                <div className="flex items-center justify-between">
+                  <div className="space-y-1">
+                    <h3 className="text-lg font-bold text-foreground">{item.sprint}</h3>
+                    <p className="text-sm text-muted-foreground">{item.period}</p>
+                  </div>
+                  <div className={`px-3 py-1 rounded-full bg-gradient-to-r ${item.color} text-white text-xs font-medium`}>
+                    {item.status}
+                  </div>
+                </div>
+
+                {/* Progress visualization */}
+                <div className="space-y-3">
+                  <div className="flex justify-between items-center">
+                    <span className="text-sm text-card-foreground">Progresso Estimado</span>
+                    <span className="text-sm font-bold text-foreground">{item.progress}%</span>
+                  </div>
+                  
+                  {/* Progress bar with glow effect */}
+                  <div className="relative">
+                    <div className="w-full bg-secondary/50 rounded-full h-3 overflow-hidden">
+                      <div 
+                        className={`bg-gradient-to-r ${item.color} h-3 rounded-full transition-all duration-700 relative`}
+                        style={{ width: `${item.progress}%` }}
+                      >
+                        {/* Inner glow */}
+                        <div className="absolute inset-0 bg-white/20 rounded-full"></div>
+                      </div>
+                    </div>
+                    {/* Outer glow */}
+                    <div 
+                      className={`absolute top-0 left-0 bg-gradient-to-r ${item.color} h-3 rounded-full opacity-30 blur-sm transition-all duration-700`}
+                      style={{ width: `${item.progress}%` }}
+                    ></div>
+                  </div>
+                </div>
+
+                {/* Status indicators */}
+                <div className="flex items-center space-x-2">
+                  <div className={`w-3 h-3 rounded-full bg-gradient-to-r ${item.color} shadow-lg`}></div>
+                  <span className="text-xs text-muted-foreground">
+                    {item.progress === 100 ? "Finalizado" : 
+                     item.progress > 0 ? "Em desenvolvimento" : "Aguardando início"}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      
+      {/* Timeline visualization */}
+      <div className="mt-8 p-6 rounded-2xl bg-gradient-to-r from-background/50 via-card/30 to-background/50 backdrop-blur-sm border border-border/30">
+        <h3 className="text-xl font-bold text-center text-foreground mb-6">Timeline Geral do Projeto</h3>
+        <div className="flex items-center justify-between relative">
+          {/* Timeline line */}
+          <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-accent rounded-full"></div>
+          
+          {burndownData.map((item, index) => (
+            <div key={index} className="relative flex flex-col items-center z-10">
+              <div className={`w-4 h-4 rounded-full bg-gradient-to-r ${item.color} border-2 border-background shadow-lg mb-2`}></div>
+              <div className="text-center">
+                <p className="text-xs font-medium text-foreground">{item.sprint}</p>
+                <p className="text-xs text-muted-foreground">{item.period.split(' a ')[0]}</p>
               </div>
             </div>
           ))}
         </div>
       </div>
-    </Card>
-  </div>
-);
+    </div>
+  );
+};
 
 const Presentation = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
