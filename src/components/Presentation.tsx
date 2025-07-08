@@ -78,84 +78,111 @@ const ProblemSlide = () => (
 
 const PersonasSlide = () => (
   <div className="space-y-8">
-    <h2 className="text-3xl font-bold text-left mb-8 text-primary">Personas</h2>
+    <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-accent bg-clip-text text-transparent">
+      Equipe de Desenvolvimento
+    </h2>
     
-    <div className="grid grid-cols-3 gap-6 h-full">
-      {/* Main Profile Section */}
-      <div className="col-span-1 space-y-6">
-        <Card className="p-6 bg-card/50 border-primary/20">
-          <div className="space-y-4">
-            <div className="w-20 h-20 bg-gradient-accent rounded-lg flex items-center justify-center mb-4">
-              <User className="w-10 h-10 text-white" />
-            </div>
-            <div className="space-y-2">
-              <div className="text-sm text-muted-foreground">Nome:</div>
-              <div className="text-lg font-semibold text-foreground">Luan Ferreira</div>
+    <div className="grid grid-cols-5 gap-8 h-full">
+      {/* Main Profile Card - Inspired by the uploaded design */}
+      <div className="col-span-2 flex justify-center items-start">
+        <div className="relative">
+          {/* Glow effect background */}
+          <div className="absolute inset-0 bg-gradient-accent opacity-20 blur-xl rounded-3xl"></div>
+          
+          {/* Main card with neon border effect */}
+          <div className="relative bg-gradient-to-br from-background via-card to-background border-2 border-transparent bg-clip-padding rounded-3xl p-8 text-center min-w-[300px]">
+            {/* Neon border overlay */}
+            <div className="absolute inset-0 rounded-3xl bg-gradient-accent opacity-50 -z-10"></div>
+            <div className="absolute inset-[2px] rounded-3xl bg-gradient-to-br from-background via-card to-background"></div>
+            
+            {/* Content */}
+            <div className="relative z-10 space-y-6">
+              {/* Icon with phoenix/wings effect */}
+              <div className="w-24 h-24 mx-auto bg-gradient-accent rounded-2xl flex items-center justify-center shadow-glow">
+                <User className="w-12 h-12 text-white" />
+              </div>
               
-              <div className="text-sm text-muted-foreground">Idade:</div>
-              <div className="text-lg font-semibold text-foreground">30 anos</div>
-              
-              <div className="text-sm text-muted-foreground">Profissão:</div>
-              <div className="text-lg font-semibold text-foreground">AI&Blockchain Entrepreneur</div>
+              <div className="space-y-4">
+                <h3 className="text-3xl font-bold text-foreground">Luan Ferreira</h3>
+                <p className="text-xl text-primary font-medium">AI & Blockchain</p>
+                <div className="w-16 h-0.5 bg-gradient-accent mx-auto"></div>
+                <div className="space-y-2">
+                  <p className="text-2xl font-light text-foreground">30 anos</p>
+                  <p className="text-lg text-muted-foreground">Gestor da equipe</p>
+                </div>
+              </div>
             </div>
           </div>
-        </Card>
-        
-        <Card className="p-6 bg-card/50 border-primary/20">
-          <div className="space-y-3">
-            <h4 className="text-lg font-semibold text-primary border-b border-primary pb-2">Perfil</h4>
+        </div>
+      </div>
+
+      {/* Info Cards Grid - Clean contrast design */}
+      <div className="col-span-3 grid grid-cols-2 gap-6">
+        <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-6 hover:bg-card/50 transition-all duration-300">
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-1 h-6 bg-gradient-accent rounded-full"></div>
+              <h4 className="text-lg font-semibold text-primary">Perfil</h4>
+            </div>
             <p className="text-sm text-card-foreground leading-relaxed">
               Empreendo há anos com foco em soluções baseadas em blockchain e inteligência artificial. 
               No hackaton, atuo como gestor do projeto, responsável pela visão de experiência do usuário, 
-              acompanhamento das entregas e apoio no front-end. Organizo as prioridades para que a equipe 
-              mantenha o foco e a fluidez entre as etapas.
+              acompanhamento das entregas e apoio no front-end.
             </p>
           </div>
-        </Card>
-      </div>
+        </div>
 
-      {/* Info Cards Grid */}
-      <div className="col-span-2 grid grid-cols-2 gap-4">
-        <Card className="p-6 bg-card/50 border-primary/20">
-          <div className="space-y-3">
-            <h4 className="text-lg font-semibold text-primary">Motivações e Objetivos</h4>
+        <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-6 hover:bg-card/50 transition-all duration-300">
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-1 h-6 bg-gradient-accent rounded-full"></div>
+              <h4 className="text-lg font-semibold text-primary">Motivações e Objetivos</h4>
+            </div>
             <p className="text-sm text-card-foreground leading-relaxed">
-              Quero aplicar minha bagagem em tecnologia e produto para entregar uma solução funcional, 
-              clara e eficiente, que resolva o problema proposto de forma completa, dentro do tempo e 
-              escopo do desafio.
+              Aplicar minha bagagem em tecnologia e produto para entregar uma solução funcional, 
+              clara e eficiente, que resolva o problema proposto de forma completa.
             </p>
           </div>
-        </Card>
+        </div>
 
-        <Card className="p-6 bg-card/50 border-primary/20">
-          <div className="space-y-3">
-            <h4 className="text-lg font-semibold text-primary">Interesse</h4>
+        <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-6 hover:bg-card/50 transition-all duration-300">
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-1 h-6 bg-gradient-accent rounded-full"></div>
+              <h4 className="text-lg font-semibold text-primary">Interesse</h4>
+            </div>
             <p className="text-sm text-card-foreground leading-relaxed">
-              Tenho interesse em unir tecnologias emergentes com foco em usabilidade e impacto direto. 
-              Busco simplificar o complexo e garantir que a tecnologia entregue valor real para quem vai usar.
+              Unir tecnologias emergentes com foco em usabilidade e impacto direto. 
+              Busco simplificar o complexo e garantir que a tecnologia entregue valor real.
             </p>
           </div>
-        </Card>
+        </div>
 
-        <Card className="p-6 bg-card/50 border-primary/20">
-          <div className="space-y-3">
-            <h4 className="text-lg font-semibold text-primary">Desafio</h4>
+        <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-6 hover:bg-card/50 transition-all duration-300">
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-1 h-6 bg-gradient-accent rounded-full"></div>
+              <h4 className="text-lg font-semibold text-primary">Desafio</h4>
+            </div>
             <p className="text-sm text-card-foreground leading-relaxed">
-              Transformar ideias e requisitos técnicos em uma solução enxuta, bem pensada e com experiência 
-              fluida. Organizar as entregas sem perder de vista o objetivo central do desafio.
+              Transformar ideias e requisitos técnicos em uma solução enxuta, bem pensada 
+              e com experiência fluida. Organizar entregas sem perder o foco.
             </p>
           </div>
-        </Card>
+        </div>
 
-        <Card className="p-6 bg-card/50 border-primary/20">
-          <div className="space-y-3">
-            <h4 className="text-lg font-semibold text-primary">Expectativa</h4>
+        <div className="col-span-2 bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-6 hover:bg-card/50 transition-all duration-300">
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-1 h-6 bg-gradient-accent rounded-full"></div>
+              <h4 className="text-lg font-semibold text-primary">Expectativa</h4>
+            </div>
             <p className="text-sm text-card-foreground leading-relaxed">
               Entregar, junto com a equipe, uma solução sólida, bem estruturada e totalmente alinhada ao 
               problema apresentado — do código ao uso final.
             </p>
           </div>
-        </Card>
+        </div>
       </div>
     </div>
   </div>
