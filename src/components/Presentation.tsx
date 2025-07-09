@@ -325,7 +325,7 @@ const ThiagoSlide = () => <div className="space-y-6 lg:space-y-8">
             <div className="relative z-10 space-y-4 lg:space-y-6">
               {/* Profile Photo */}
               <div className="w-20 h-20 lg:w-24 lg:h-24 mx-auto rounded-2xl overflow-hidden shadow-glow border-2 border-white/20 bg-gradient-to-br from-green-500/20 to-blue-500/20">
-                <img src="/lovable-uploads/e9af9d46-6f8e-4988-ba78-6e2b99f64f8f.png" alt="Thiago Santos" className="w-full h-full object-cover" />
+                <img alt="Thiago Santos" className="w-full h-full object-cover" src="/lovable-uploads/9fc337cc-2d1d-45bc-a640-342e497d5fe3.png" />
               </div>
               
               <div className="space-y-3 lg:space-y-4">
