@@ -106,7 +106,7 @@ const PersonasSlide = () => (
               {/* Avatar photo */}
               <div className="w-24 h-24 mx-auto rounded-2xl overflow-hidden shadow-glow border-2 border-white/20">
                 <img 
-                  src="/lovable-uploads/30d0d975-6484-4091-ac6f-453858d80425.png" 
+                  src="/lovable-uploads/d6d8d0a5-7fd3-4a76-88f4-3a8c2201f724.png" 
                   alt="Luan Ferreira" 
                   className="w-full h-full object-cover"
                 />
