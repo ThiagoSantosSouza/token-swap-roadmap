@@ -1,74 +1,52 @@
-
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { ChevronLeft, ChevronRight, User } from 'lucide-react';
-
-const slides = [
-  {
-    id: 1,
-    title: "Capa",
-    component: "CoverSlide"
-  },
-  {
-    id: 2,
-    title: "Descrição do Problema",
-    component: "ProblemSlide"
-  },
-  {
-    id: 3,
-    title: "Equipe - Luan Ferreira",
-    component: "PersonasSlide"
-  },
-  {
-    id: 4,
-    title: "Equipe - Alexsandro Luz",
-    component: "AlexsandroSlide"
-  },
-  {
-    id: 5,
-    title: "Equipe - Thiago Santos",
-    component: "ThiagoSlide"
-  },
-  {
-    id: 6,
-    title: "Equipe - Ronaldo Dominguez",
-    component: "RonaldoSlide"
-  },
-  {
-    id: 7,
-    title: "User Stories/Tarefas",
-    component: "UserStoriesSlide"
-  },
-  {
-    id: 8,
-    title: "Definição de Feito",
-    component: "DefinitionOfDoneSlide"
-  },
-  {
-    id: 9,
-    title: "Roadmap - Sprints",
-    component: "SprintsSlide"
-  },
-  {
-    id: 10,
-    title: "Cronograma",
-    component: "BurndownSlide"
-  }
-];
-
-const CoverSlide = () => (
-  <div className="flex items-center justify-center h-full">
-    <img 
-      src="/lovable-uploads/d598a7b2-9c30-49a2-b056-2e722b88a75e.png" 
-      alt="FENIX ROADMAP - HACKATOM 2nd edition" 
-      className="max-w-full max-h-full object-contain rounded-lg"
-    />
-  </div>
-);
-
-const ProblemSlide = () => (
-  <div className="space-y-6 lg:space-y-8">
+const slides = [{
+  id: 1,
+  title: "Capa",
+  component: "CoverSlide"
+}, {
+  id: 2,
+  title: "Descrição do Problema",
+  component: "ProblemSlide"
+}, {
+  id: 3,
+  title: "Equipe - Luan Ferreira",
+  component: "PersonasSlide"
+}, {
+  id: 4,
+  title: "Equipe - Alexsandro Luz",
+  component: "AlexsandroSlide"
+}, {
+  id: 5,
+  title: "Equipe - Thiago Santos",
+  component: "ThiagoSlide"
+}, {
+  id: 6,
+  title: "Equipe - Ronaldo Dominguez",
+  component: "RonaldoSlide"
+}, {
+  id: 7,
+  title: "User Stories/Tarefas",
+  component: "UserStoriesSlide"
+}, {
+  id: 8,
+  title: "Definição de Feito",
+  component: "DefinitionOfDoneSlide"
+}, {
+  id: 9,
+  title: "Roadmap - Sprints",
+  component: "SprintsSlide"
+}, {
+  id: 10,
+  title: "Cronograma",
+  component: "BurndownSlide"
+}];
+const CoverSlide = () => <div className="flex items-center justify-center h-full">
+    <img src="/lovable-uploads/d598a7b2-9c30-49a2-b056-2e722b88a75e.png" alt="FENIX ROADMAP - HACKATOM 2nd edition" className="max-w-full max-h-full object-contain rounded-lg" />
+  </div>;
+const ProblemSlide = () => <div className="space-y-6 lg:space-y-8">
     <h2 className="text-2xl lg:text-3xl font-bold text-center mb-6 lg:mb-8">Descrição do Problema</h2>
     <div className="grid gap-4 lg:gap-6">
       <Card className="p-4 lg:p-6 bg-card border-border">
@@ -86,11 +64,8 @@ const ProblemSlide = () => (
         </p>
       </Card>
     </div>
-  </div>
-);
-
-const PersonasSlide = () => (
-  <div className="space-y-6 lg:space-y-8">
+  </div>;
+const PersonasSlide = () => <div className="space-y-6 lg:space-y-8">
     <h2 className="text-2xl lg:text-4xl font-bold text-center mb-8 lg:mb-12 bg-gradient-accent bg-clip-text text-transparent">
       Luan Ferreira - Gestor & Visionário
     </h2>
@@ -118,11 +93,7 @@ const PersonasSlide = () => (
             <div className="relative z-10 space-y-4 lg:space-y-6">
               {/* Profile Photo */}
               <div className="w-20 h-20 lg:w-24 lg:h-24 mx-auto rounded-2xl overflow-hidden shadow-glow border-2 border-white/20 bg-gradient-to-br from-purple-500/20 to-cyan-500/20">
-                <img 
-                  src="/lovable-uploads/1d6ea33c-3988-4782-b860-214b466b37e4.png" 
-                  alt="Luan Ferreira" 
-                  className="w-full h-full object-cover"
-                />
+                <img src="/lovable-uploads/1d6ea33c-3988-4782-b860-214b466b37e4.png" alt="Luan Ferreira" className="w-full h-full object-cover" />
               </div>
               
               <div className="space-y-3 lg:space-y-4">
@@ -208,11 +179,8 @@ const PersonasSlide = () => (
         </div>
       </div>
     </div>
-  </div>
-);
-
-const AlexsandroSlide = () => (
-  <div className="space-y-6 lg:space-y-8">
+  </div>;
+const AlexsandroSlide = () => <div className="space-y-6 lg:space-y-8">
     <h2 className="text-2xl lg:text-4xl font-bold text-center mb-8 lg:mb-12 bg-gradient-accent bg-clip-text text-transparent">
       Alexsandro Luz - Arquiteto & Visionário Tecnológico
     </h2>
@@ -240,11 +208,7 @@ const AlexsandroSlide = () => (
             <div className="relative z-10 space-y-4 lg:space-y-6">
               {/* Profile Photo */}
               <div className="w-20 h-20 lg:w-24 lg:h-24 mx-auto rounded-2xl overflow-hidden shadow-glow border-2 border-white/20 bg-gradient-to-br from-orange-500/20 to-pink-500/20">
-                <img 
-                  src="/lovable-uploads/317428f5-3738-4cc6-ab0b-6a536ff3e207.png" 
-                  alt="Alexsandro Luz" 
-                  className="w-full h-full object-cover"
-                />
+                <img src="/lovable-uploads/317428f5-3738-4cc6-ab0b-6a536ff3e207.png" alt="Alexsandro Luz" className="w-full h-full object-cover" />
               </div>
               
               <div className="space-y-3 lg:space-y-4">
@@ -332,11 +296,8 @@ const AlexsandroSlide = () => (
         </div>
       </div>
     </div>
-  </div>
-);
-
-const ThiagoSlide = () => (
-  <div className="space-y-6 lg:space-y-8">
+  </div>;
+const ThiagoSlide = () => <div className="space-y-6 lg:space-y-8">
     <h2 className="text-2xl lg:text-4xl font-bold text-center mb-8 lg:mb-12 bg-gradient-accent bg-clip-text text-transparent">
       Thiago Santos - Analista de Sistemas
     </h2>
@@ -364,11 +325,7 @@ const ThiagoSlide = () => (
             <div className="relative z-10 space-y-4 lg:space-y-6">
               {/* Profile Photo */}
               <div className="w-20 h-20 lg:w-24 lg:h-24 mx-auto rounded-2xl overflow-hidden shadow-glow border-2 border-white/20 bg-gradient-to-br from-green-500/20 to-blue-500/20">
-                <img 
-                  src="/lovable-uploads/e9af9d46-6f8e-4988-ba78-6e2b99f64f8f.png" 
-                  alt="Thiago Santos" 
-                  className="w-full h-full object-cover"
-                />
+                <img src="/lovable-uploads/e9af9d46-6f8e-4988-ba78-6e2b99f64f8f.png" alt="Thiago Santos" className="w-full h-full object-cover" />
               </div>
               
               <div className="space-y-3 lg:space-y-4">
@@ -453,11 +410,8 @@ const ThiagoSlide = () => (
         </div>
       </div>
     </div>
-  </div>
-);
-
-const RonaldoSlide = () => (
-  <div className="space-y-6 lg:space-y-8">
+  </div>;
+const RonaldoSlide = () => <div className="space-y-6 lg:space-y-8">
     <h2 className="text-2xl lg:text-4xl font-bold text-center mb-8 lg:mb-12 bg-gradient-accent bg-clip-text text-transparent">
       Ronaldo Dominguez - Analista & Engenheiro de Software
     </h2>
@@ -485,11 +439,7 @@ const RonaldoSlide = () => (
             <div className="relative z-10 space-y-4 lg:space-y-6">
               {/* Profile Photo */}
               <div className="w-20 h-20 lg:w-24 lg:h-24 mx-auto rounded-2xl overflow-hidden shadow-glow border-2 border-white/20 bg-gradient-to-br from-indigo-500/20 to-cyan-500/20">
-                <img 
-                  src="/lovable-uploads/c33a3f0a-9984-43f7-93a5-a6c7d0049a52.png" 
-                  alt="Ronaldo Dominguez" 
-                  className="w-full h-full object-cover"
-                />
+                <img alt="Ronaldo Dominguez" className="w-full h-full object-cover" src="/lovable-uploads/ab80552c-ddbc-4755-8183-db797c8b4861.png" />
               </div>
               
               <div className="space-y-3 lg:space-y-4">
@@ -574,54 +524,30 @@ const RonaldoSlide = () => (
         </div>
       </div>
     </div>
-  </div>
-);
-
+  </div>;
 const UserStoriesSlide = () => {
-  const userStories = [
-    {
-      category: "Conexão e Autenticação",
-      icon: "🔗",
-      color: "from-blue-500 to-cyan-400",
-      stories: [
-        "Como usuário, quero conectar minha carteira Web3 de forma segura e intuitiva",
-        "Como usuário, quero visualizar meu saldo e assets de forma clara no dashboard"
-      ]
-    },
-    {
-      category: "Operações de Swap",
-      icon: "🔄",
-      color: "from-green-500 to-emerald-400",
-      stories: [
-        "Como usuário, quero realizar swaps de tokens com taxas transparentes",
-        "Como usuário, quero receber estimativas precisas antes de confirmar transações",
-        "Como usuário, quero acompanhar o status das minhas transações em tempo real"
-      ]
-    },
-    {
-      category: "Monitoramento e Histórico",
-      icon: "📊",
-      color: "from-purple-500 to-pink-400",
-      stories: [
-        "Como usuário, quero visualizar meu histórico completo de transações",
-        "Como usuário, quero acompanhar preços de tokens em tempo real",
-        "Como usuário, quero receber notificações sobre mudanças importantes"
-      ]
-    },
-    {
-      category: "Desenvolvimento Técnico",
-      icon: "⚙️",
-      color: "from-orange-500 to-red-400",
-      stories: [
-        "Como desenvolvedor, quero integrar oráculos de preço confiáveis",
-        "Como desenvolvedor, quero implementar testes automatizados abrangentes",
-        "Como equipe, queremos documentar todas as APIs e contratos"
-      ]
-    }
-  ];
-
-  return (
-    <div className="space-y-6 lg:space-y-8">
+  const userStories = [{
+    category: "Conexão e Autenticação",
+    icon: "🔗",
+    color: "from-blue-500 to-cyan-400",
+    stories: ["Como usuário, quero conectar minha carteira Web3 de forma segura e intuitiva", "Como usuário, quero visualizar meu saldo e assets de forma clara no dashboard"]
+  }, {
+    category: "Operações de Swap",
+    icon: "🔄",
+    color: "from-green-500 to-emerald-400",
+    stories: ["Como usuário, quero realizar swaps de tokens com taxas transparentes", "Como usuário, quero receber estimativas precisas antes de confirmar transações", "Como usuário, quero acompanhar o status das minhas transações em tempo real"]
+  }, {
+    category: "Monitoramento e Histórico",
+    icon: "📊",
+    color: "from-purple-500 to-pink-400",
+    stories: ["Como usuário, quero visualizar meu histórico completo de transações", "Como usuário, quero acompanhar preços de tokens em tempo real", "Como usuário, quero receber notificações sobre mudanças importantes"]
+  }, {
+    category: "Desenvolvimento Técnico",
+    icon: "⚙️",
+    color: "from-orange-500 to-red-400",
+    stories: ["Como desenvolvedor, quero integrar oráculos de preço confiáveis", "Como desenvolvedor, quero implementar testes automatizados abrangentes", "Como equipe, queremos documentar todas as APIs e contratos"]
+  }];
+  return <div className="space-y-6 lg:space-y-8">
       <div className="text-center space-y-3 lg:space-y-4">
         <h2 className="text-2xl lg:text-4xl font-bold bg-gradient-accent bg-clip-text text-transparent">
           Lista de User Stories/Tarefas
@@ -630,8 +556,7 @@ const UserStoriesSlide = () => {
       </div>
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
-        {userStories.map((category, categoryIndex) => (
-          <div key={categoryIndex} className="relative group">
+        {userStories.map((category, categoryIndex) => <div key={categoryIndex} className="relative group">
             {/* Outer glow effect */}
             <div className={`absolute inset-0 bg-gradient-to-r ${category.color} opacity-20 blur-xl rounded-2xl scale-105 group-hover:opacity-30 transition-opacity duration-500`}></div>
             
@@ -657,71 +582,42 @@ const UserStoriesSlide = () => {
 
                 {/* Stories */}
                 <div className="space-y-2 lg:space-y-3">
-                  {category.stories.map((story, storyIndex) => (
-                    <div key={storyIndex} className="flex items-start space-x-3 group/story">
+                  {category.stories.map((story, storyIndex) => <div key={storyIndex} className="flex items-start space-x-3 group/story">
                       <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${category.color} mt-2 group-hover/story:scale-125 transition-transform duration-200`}></div>
                       <p className="text-xs lg:text-sm text-card-foreground/90 leading-relaxed group-hover/story:text-foreground transition-colors duration-200">
                         {story}
                       </p>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          </div>)}
       </div>
-    </div>
-  );
+    </div>;
 };
-
 const DefinitionOfDoneSlide = () => {
-  const doneChecklist = [
-    {
-      category: "Qualidade de Código",
-      icon: "🛡️",
-      color: "from-emerald-500 via-green-400 to-teal-500",
-      criteria: [
-        "Código revisado e aprovado pelo time",
-        "Testes unitários implementados e passando", 
-        "Cobertura de testes acima de 80%"
-      ]
-    },
-    {
-      category: "Documentação",
-      icon: "📚",
-      color: "from-blue-500 via-indigo-400 to-purple-500",
-      criteria: [
-        "Documentação técnica atualizada no GitBook",
-        "APIs documentadas com exemplos",
-        "Readme atualizado com instruções"
-      ]
-    },
-    {
-      category: "Deploy e Infraestrutura",
-      icon: "🚀",
-      color: "from-orange-500 via-red-400 to-pink-500",
-      criteria: [
-        "Deploy realizado na testnet",
-        "Smart contracts verificados",
-        "Frontend hospedado e funcional"
-      ]
-    },
-    {
-      category: "Testes e Validação",
-      icon: "⚡",
-      color: "from-cyan-500 via-blue-400 to-indigo-500",
-      criteria: [
-        "Funcionalidade testada end-to-end",
-        "Interface responsiva e acessível",
-        "Integração com Chainlink funcionando",
-        "Validações de segurança implementadas"
-      ]
-    }
-  ];
-
-  return (
-    <div className="space-y-6 lg:space-y-8">
+  const doneChecklist = [{
+    category: "Qualidade de Código",
+    icon: "🛡️",
+    color: "from-emerald-500 via-green-400 to-teal-500",
+    criteria: ["Código revisado e aprovado pelo time", "Testes unitários implementados e passando", "Cobertura de testes acima de 80%"]
+  }, {
+    category: "Documentação",
+    icon: "📚",
+    color: "from-blue-500 via-indigo-400 to-purple-500",
+    criteria: ["Documentação técnica atualizada no GitBook", "APIs documentadas com exemplos", "Readme atualizado com instruções"]
+  }, {
+    category: "Deploy e Infraestrutura",
+    icon: "🚀",
+    color: "from-orange-500 via-red-400 to-pink-500",
+    criteria: ["Deploy realizado na testnet", "Smart contracts verificados", "Frontend hospedado e funcional"]
+  }, {
+    category: "Testes e Validação",
+    icon: "⚡",
+    color: "from-cyan-500 via-blue-400 to-indigo-500",
+    criteria: ["Funcionalidade testada end-to-end", "Interface responsiva e acessível", "Integração com Chainlink funcionando", "Validações de segurança implementadas"]
+  }];
+  return <div className="space-y-6 lg:space-y-8">
       <div className="text-center space-y-3 lg:space-y-4">
         <h2 className="text-2xl lg:text-4xl font-bold bg-gradient-accent bg-clip-text text-transparent">
           Definição de Feito
@@ -731,8 +627,7 @@ const DefinitionOfDoneSlide = () => {
       </div>
       
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-6">
-        {doneChecklist.map((section, sectionIndex) => (
-          <div key={sectionIndex} className="relative group">
+        {doneChecklist.map((section, sectionIndex) => <div key={sectionIndex} className="relative group">
             {/* Holographic glow */}
             <div className={`absolute inset-0 bg-gradient-to-r ${section.color} opacity-20 blur-2xl rounded-3xl scale-110 group-hover:opacity-30 transition-all duration-700`}></div>
             
@@ -759,8 +654,7 @@ const DefinitionOfDoneSlide = () => {
 
                 {/* Criteria list */}
                 <div className="space-y-3 lg:space-y-4">
-                  {section.criteria.map((criteria, criteriaIndex) => (
-                    <div key={criteriaIndex} className="flex items-start space-x-3 group/criteria">
+                  {section.criteria.map((criteria, criteriaIndex) => <div key={criteriaIndex} className="flex items-start space-x-3 group/criteria">
                       {/* Animated checkmark */}
                       <div className={`w-5 h-5 lg:w-6 lg:h-6 rounded-lg bg-gradient-to-r ${section.color} flex items-center justify-center mt-0.5 group-hover/criteria:scale-110 transition-transform duration-200 shadow-lg`}>
                         <span className="text-white text-xs font-bold">✓</span>
@@ -768,87 +662,37 @@ const DefinitionOfDoneSlide = () => {
                       <p className="text-xs lg:text-sm text-card-foreground/90 leading-relaxed group-hover/criteria:text-foreground transition-colors duration-200">
                         {criteria}
                       </p>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          </div>)}
       </div>
-    </div>
-  );
+    </div>;
 };
-
 const SprintsSlide = () => {
-  const sprints = [
-    {
-      name: "Setup e Organização",
-      tasks: [
-        "Definir arquitetura e tecnologias",
-        "Criar repositório no GitHub",
-        "Configurar estrutura no Bitrix",
-        "Criar GitBook e documentar escopo",
-        "Protótipo das telas principais",
-        "Template React com Wagmi/WalletConnect"
-      ]
-    },
-    {
-      name: "Smart Contracts + Frontend Base",
-      tasks: [
-        "Implementar contrato base (SwapBook)",
-        "Criar funções: createSwap, swapTokens",
-        "Tela de conexão com carteira",
-        "Integrar Wagmi + ConnectKit",
-        "Atualizar GitBook com arquitetura"
-      ]
-    },
-    {
-      name: "Integrações e Lógica de Swap",
-      tasks: [
-        "Integração Chainlink (oracle de preço)",
-        "Testes em testnet (Mumbai)",
-        "Formulário funcional de swap",
-        "Feedbacks visuais (sucesso/erro)",
-        "Início do dashboard DeFi"
-      ]
-    },
-    {
-      name: "Dashboard + Refino de Contratos",
-      tasks: [
-        "Exibir volume de swaps e histórico",
-        "Indexar eventos de contrato",
-        "Integração CoinGecko API",
-        "Melhorias de segurança",
-        "Atualização de testes unitários"
-      ]
-    },
-    {
-      name: "Testes Finais + Deploy",
-      tasks: [
-        "Testes ponta a ponta",
-        "Deploy do contrato na testnet",
-        "Deploy do front-end",
-        "Finalizar documentação GitBook",
-        "Preparar roteiro e vídeo",
-        "Criar pitch deck"
-      ]
-    },
-    {
-      name: "Entrega Oficial",
-      tasks: [
-        "Submeter projeto na plataforma",
-        "Finalizar checklist do edital",
-        "Enviar vídeo, pitch e links"
-      ]
-    }
-  ];
-
+  const sprints = [{
+    name: "Setup e Organização",
+    tasks: ["Definir arquitetura e tecnologias", "Criar repositório no GitHub", "Configurar estrutura no Bitrix", "Criar GitBook e documentar escopo", "Protótipo das telas principais", "Template React com Wagmi/WalletConnect"]
+  }, {
+    name: "Smart Contracts + Frontend Base",
+    tasks: ["Implementar contrato base (SwapBook)", "Criar funções: createSwap, swapTokens", "Tela de conexão com carteira", "Integrar Wagmi + ConnectKit", "Atualizar GitBook com arquitetura"]
+  }, {
+    name: "Integrações e Lógica de Swap",
+    tasks: ["Integração Chainlink (oracle de preço)", "Testes em testnet (Mumbai)", "Formulário funcional de swap", "Feedbacks visuais (sucesso/erro)", "Início do dashboard DeFi"]
+  }, {
+    name: "Dashboard + Refino de Contratos",
+    tasks: ["Exibir volume de swaps e histórico", "Indexar eventos de contrato", "Integração CoinGecko API", "Melhorias de segurança", "Atualização de testes unitários"]
+  }, {
+    name: "Testes Finais + Deploy",
+    tasks: ["Testes ponta a ponta", "Deploy do contrato na testnet", "Deploy do front-end", "Finalizar documentação GitBook", "Preparar roteiro e vídeo", "Criar pitch deck"]
+  }, {
+    name: "Entrega Oficial",
+    tasks: ["Submeter projeto na plataforma", "Finalizar checklist do edital", "Enviar vídeo, pitch e links"]
+  }];
   const sprintsFirstHalf = sprints.slice(0, 3);
   const sprintsSecondHalf = sprints.slice(3);
-
-  return (
-    <div className="space-y-6 lg:space-y-8">
+  return <div className="space-y-6 lg:space-y-8">
       <div className="text-center space-y-3 lg:space-y-4">
         <h2 className="text-2xl lg:text-4xl font-bold bg-gradient-accent bg-clip-text text-transparent">
           Roadmap - Sprints
@@ -858,8 +702,7 @@ const SprintsSlide = () => {
       
       {/* First Row */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6">
-        {sprintsFirstHalf.map((sprint, index) => (
-          <div key={index} className="relative group">
+        {sprintsFirstHalf.map((sprint, index) => <div key={index} className="relative group">
             {/* Holographic background */}
             <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-cyan-500/20 blur-xl rounded-2xl scale-105 group-hover:scale-110 transition-transform duration-500"></div>
             
@@ -883,25 +726,21 @@ const SprintsSlide = () => {
 
                 {/* Tasks */}
                 <div className="space-y-1.5 lg:space-y-2">
-                  {sprint.tasks.map((task, taskIndex) => (
-                    <div key={taskIndex} className="flex items-start space-x-2 group/task">
+                  {sprint.tasks.map((task, taskIndex) => <div key={taskIndex} className="flex items-start space-x-2 group/task">
                       <div className="w-1 h-1 lg:w-1.5 lg:h-1.5 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500 mt-1.5 lg:mt-2 group-hover/task:scale-125 transition-transform duration-200"></div>
                       <p className="text-xs lg:text-xs text-card-foreground/90 leading-relaxed group-hover/task:text-foreground transition-colors duration-200">
                         {task}
                       </p>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          </div>)}
       </div>
 
       {/* Second Row */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6">
-        {sprintsSecondHalf.map((sprint, index) => (
-          <div key={index + 3} className="relative group">
+        {sprintsSecondHalf.map((sprint, index) => <div key={index + 3} className="relative group">
             {/* Holographic background */}
             <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 via-red-500/20 to-pink-500/20 blur-xl rounded-2xl scale-105 group-hover:scale-110 transition-transform duration-500"></div>
             
@@ -925,60 +764,46 @@ const SprintsSlide = () => {
 
                 {/* Tasks */}
                 <div className="space-y-1.5 lg:space-y-2">
-                  {sprint.tasks.map((task, taskIndex) => (
-                    <div key={taskIndex} className="flex items-start space-x-2 group/task">
+                  {sprint.tasks.map((task, taskIndex) => <div key={taskIndex} className="flex items-start space-x-2 group/task">
                       <div className="w-1 h-1 lg:w-1.5 lg:h-1.5 rounded-full bg-gradient-to-r from-orange-500 to-pink-500 mt-1.5 lg:mt-2 group-hover/task:scale-125 transition-transform duration-200"></div>
                       <p className="text-xs lg:text-xs text-card-foreground/90 leading-relaxed group-hover/task:text-foreground transition-colors duration-200">
                         {task}
                       </p>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          </div>)}
       </div>
-    </div>
-  );
+    </div>;
 };
-
 const BurndownSlide = () => {
-  const roadmapSteps = [
-    { 
-      name: "Setup e Organização",
-      period: "08 a 11 de Julho",
-      completed: true
-    },
-    { 
-      name: "Smart Contracts + Frontend Base",
-      period: "12 a 18 de Julho",
-      completed: false
-    },
-    { 
-      name: "Integrações e Lógica de Swap",
-      period: "19 a 25 de Julho",
-      completed: false
-    },
-    { 
-      name: "Dashboard + Refino de Contratos",
-      period: "26 de Julho a 01 de Agosto",
-      completed: false
-    },
-    { 
-      name: "Testes Finais + Deploy",
-      period: "02 a 07 de Agosto",
-      completed: false
-    },
-    { 
-      name: "Entrega Oficial",
-      period: "08 e 09 de Agosto",
-      completed: false
-    }
-  ];
-
-  return (
-    <div className="space-y-8 lg:space-y-10">
+  const roadmapSteps = [{
+    name: "Setup e Organização",
+    period: "08 a 11 de Julho",
+    completed: true
+  }, {
+    name: "Smart Contracts + Frontend Base",
+    period: "12 a 18 de Julho",
+    completed: false
+  }, {
+    name: "Integrações e Lógica de Swap",
+    period: "19 a 25 de Julho",
+    completed: false
+  }, {
+    name: "Dashboard + Refino de Contratos",
+    period: "26 de Julho a 01 de Agosto",
+    completed: false
+  }, {
+    name: "Testes Finais + Deploy",
+    period: "02 a 07 de Agosto",
+    completed: false
+  }, {
+    name: "Entrega Oficial",
+    period: "08 e 09 de Agosto",
+    completed: false
+  }];
+  return <div className="space-y-8 lg:space-y-10">
       <div className="text-center space-y-3 lg:space-y-4">
         <h2 className="text-2xl lg:text-4xl font-bold bg-gradient-accent bg-clip-text text-transparent">
           Cronograma
@@ -992,26 +817,17 @@ const BurndownSlide = () => {
         {/* Vertical neon line */}
         <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-transparent via-muted to-transparent"></div>
         
-        {roadmapSteps.map((step, index) => (
-          <div key={index} className="relative flex items-center w-full max-w-5xl">
+        {roadmapSteps.map((step, index) => <div key={index} className="relative flex items-center w-full max-w-5xl">
             {/* Center connector */}
             <div className="absolute left-1/2 transform -translate-x-1/2 z-20">
               {/* Neon glow effect for completed step */}
-              {step.completed && (
-                <div className="absolute inset-0 w-4 h-4 lg:w-6 lg:h-6 bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 rounded-full blur-md opacity-80"></div>
-              )}
+              {step.completed && <div className="absolute inset-0 w-4 h-4 lg:w-6 lg:h-6 bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 rounded-full blur-md opacity-80"></div>}
               
               {/* Main circle */}
-              <div className={`w-4 h-4 lg:w-6 lg:h-6 rounded-full border-2 lg:border-4 relative z-10 ${
-                step.completed 
-                  ? 'bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 border-white shadow-[0_0_20px_rgba(168,85,247,0.8)]' 
-                  : 'bg-muted border-muted-foreground/50'
-              }`}>
-                {step.completed && (
-                  <div className="absolute inset-0.5 lg:inset-1 bg-white rounded-full flex items-center justify-center">
+              <div className={`w-4 h-4 lg:w-6 lg:h-6 rounded-full border-2 lg:border-4 relative z-10 ${step.completed ? 'bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 border-white shadow-[0_0_20px_rgba(168,85,247,0.8)]' : 'bg-muted border-muted-foreground/50'}`}>
+                {step.completed && <div className="absolute inset-0.5 lg:inset-1 bg-white rounded-full flex items-center justify-center">
                     <div className="w-1 h-1 lg:w-2 lg:h-2 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full"></div>
-                  </div>
-                )}
+                  </div>}
               </div>
             </div>
             
@@ -1019,23 +835,15 @@ const BurndownSlide = () => {
             <div className={`w-64 lg:w-80 ${index % 2 === 0 ? 'mr-auto pr-8 lg:pr-12' : 'ml-auto pl-8 lg:pl-12'}`}>
               <div className="relative group">
                 {/* Glow effect for completed steps */}
-                {step.completed && (
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-pink-500/20 to-cyan-500/20 blur-xl rounded-2xl scale-105 opacity-80"></div>
-                )}
+                {step.completed && <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-pink-500/20 to-cyan-500/20 blur-xl rounded-2xl scale-105 opacity-80"></div>}
                 
                 {/* Main card */}
-                <div className={`relative rounded-2xl p-3 lg:p-6 backdrop-blur-sm border transition-all duration-500 ${
-                  step.completed 
-                    ? 'bg-gradient-to-br from-background/90 via-card/80 to-background/90 border-primary/30 shadow-glow' 
-                    : 'bg-card/30 border-border/30 hover:bg-card/50'
-                }`}>
+                <div className={`relative rounded-2xl p-3 lg:p-6 backdrop-blur-sm border transition-all duration-500 ${step.completed ? 'bg-gradient-to-br from-background/90 via-card/80 to-background/90 border-primary/30 shadow-glow' : 'bg-card/30 border-border/30 hover:bg-card/50'}`}>
                   
                   {/* Animated border for completed steps */}
-                  {step.completed && (
-                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 p-[2px] opacity-60">
+                  {step.completed && <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 p-[2px] opacity-60">
                       <div className="absolute inset-[2px] rounded-2xl bg-gradient-to-br from-background via-card to-background"></div>
-                    </div>
-                  )}
+                    </div>}
                   
                   <div className="relative z-10 space-y-2 lg:space-y-3">
                     <h3 className={`text-sm lg:text-lg font-bold ${step.completed ? 'text-foreground' : 'text-muted-foreground'}`}>
@@ -1045,61 +853,61 @@ const BurndownSlide = () => {
                       {step.period}
                     </p>
                     
-                    {step.completed && (
-                      <div className="flex items-center space-x-2 pt-1 lg:pt-2">
+                    {step.completed && <div className="flex items-center space-x-2 pt-1 lg:pt-2">
                         <div className="w-1.5 h-1.5 lg:w-2 lg:h-2 bg-gradient-to-r from-green-500 to-emerald-400 rounded-full shadow-sm"></div>
                         <span className="text-xs text-green-500 font-medium">Concluído</span>
-                      </div>
-                    )}
+                      </div>}
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          </div>)}
         
         {/* Glowing line for completed section */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-purple-500 via-pink-500 to-cyan-500 shadow-[0_0_10px_rgba(168,85,247,0.6)]" 
-             style={{ 
-               height: `${(100 / roadmapSteps.length) * roadmapSteps.findIndex(step => !step.completed)}%`,
-               top: '0px'
-             }}>
+        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-purple-500 via-pink-500 to-cyan-500 shadow-[0_0_10px_rgba(168,85,247,0.6)]" style={{
+        height: `${100 / roadmapSteps.length * roadmapSteps.findIndex(step => !step.completed)}%`,
+        top: '0px'
+      }}>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 const Presentation = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
+    setCurrentSlide(prev => (prev + 1) % slides.length);
   };
-
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    setCurrentSlide(prev => (prev - 1 + slides.length) % slides.length);
   };
-
   const renderSlide = () => {
     const slide = slides[currentSlide];
     switch (slide.component) {
-      case "CoverSlide": return <CoverSlide />;
-      case "ProblemSlide": return <ProblemSlide />;
-      case "PersonasSlide": return <PersonasSlide />;
-      case "AlexsandroSlide": return <AlexsandroSlide />;
-      case "ThiagoSlide": return <ThiagoSlide />;
-      case "RonaldoSlide": return <RonaldoSlide />;
-      case "UserStoriesSlide": return <UserStoriesSlide />;
-      case "DefinitionOfDoneSlide": return <DefinitionOfDoneSlide />;
-      case "SprintsSlide": return <SprintsSlide />;
-      case "BurndownSlide": return <BurndownSlide />;
-      default: return <CoverSlide />;
+      case "CoverSlide":
+        return <CoverSlide />;
+      case "ProblemSlide":
+        return <ProblemSlide />;
+      case "PersonasSlide":
+        return <PersonasSlide />;
+      case "AlexsandroSlide":
+        return <AlexsandroSlide />;
+      case "ThiagoSlide":
+        return <ThiagoSlide />;
+      case "RonaldoSlide":
+        return <RonaldoSlide />;
+      case "UserStoriesSlide":
+        return <UserStoriesSlide />;
+      case "DefinitionOfDoneSlide":
+        return <DefinitionOfDoneSlide />;
+      case "SprintsSlide":
+        return <SprintsSlide />;
+      case "BurndownSlide":
+        return <BurndownSlide />;
+      default:
+        return <CoverSlide />;
     }
   };
-
-  return (
-    <div className="min-h-screen bg-gradient-primary p-4 lg:p-8">
+  return <div className="min-h-screen bg-gradient-primary p-4 lg:p-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex justify-between items-center mb-6 lg:mb-8">
@@ -1118,12 +926,7 @@ const Presentation = () => {
 
         {/* Navigation */}
         <div className="flex justify-between items-center mt-6 lg:mt-8">
-          <Button 
-            onClick={prevSlide} 
-            variant="secondary" 
-            disabled={currentSlide === 0}
-            className="flex items-center gap-2 text-sm lg:text-base"
-          >
+          <Button onClick={prevSlide} variant="secondary" disabled={currentSlide === 0} className="flex items-center gap-2 text-sm lg:text-base">
             <ChevronLeft className="w-4 h-4" />
             Anterior
           </Button>
@@ -1134,12 +937,7 @@ const Presentation = () => {
             </h3>
           </div>
           
-          <Button 
-            onClick={nextSlide} 
-            variant="secondary"
-            disabled={currentSlide === slides.length - 1}
-            className="flex items-center gap-2 text-sm lg:text-base"
-          >
+          <Button onClick={nextSlide} variant="secondary" disabled={currentSlide === slides.length - 1} className="flex items-center gap-2 text-sm lg:text-base">
             Próximo
             <ChevronRight className="w-4 h-4" />
           </Button>
@@ -1147,21 +945,9 @@ const Presentation = () => {
 
         {/* Slide Indicator */}
         <div className="flex justify-center space-x-2 mt-4">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`w-2 h-2 lg:w-3 lg:h-3 rounded-full transition-all ${
-                index === currentSlide 
-                  ? 'bg-primary shadow-glow' 
-                  : 'bg-muted hover:bg-muted-foreground'
-              }`}
-            />
-          ))}
+          {slides.map((_, index) => <button key={index} onClick={() => setCurrentSlide(index)} className={`w-2 h-2 lg:w-3 lg:h-3 rounded-full transition-all ${index === currentSlide ? 'bg-primary shadow-glow' : 'bg-muted hover:bg-muted-foreground'}`} />)}
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Presentation;
