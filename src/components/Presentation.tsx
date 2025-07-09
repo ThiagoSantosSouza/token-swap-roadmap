@@ -16,27 +16,42 @@ const slides = [
   },
   {
     id: 3,
-    title: "Personas",
+    title: "Equipe - Luan Ferreira",
     component: "PersonasSlide"
   },
   {
     id: 4,
+    title: "Equipe - Alexsandro Luz",
+    component: "AlexsandroSlide"
+  },
+  {
+    id: 5,
+    title: "Equipe - Thiago Santos",
+    component: "ThiagoSlide"
+  },
+  {
+    id: 6,
+    title: "Equipe - Ronaldo Dominguez",
+    component: "RonaldoSlide"
+  },
+  {
+    id: 7,
     title: "User Stories/Tarefas",
     component: "UserStoriesSlide"
   },
   {
-    id: 5,
+    id: 8,
     title: "Definição de Feito",
     component: "DefinitionOfDoneSlide"
   },
   {
-    id: 6,
-    title: "Sprints",
+    id: 9,
+    title: "Roadmap - Sprints",
     component: "SprintsSlide"
   },
   {
-    id: 7,
-    title: "Burndown Chart",
+    id: 10,
+    title: "Cronograma",
     component: "BurndownSlide"
   }
 ];
@@ -79,7 +94,7 @@ const ProblemSlide = () => (
 const PersonasSlide = () => (
   <div className="space-y-8">
     <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-accent bg-clip-text text-transparent">
-      Equipe de Desenvolvimento
+      Luan Ferreira - Gestor & Visionário
     </h2>
     
     <div className="grid grid-cols-5 gap-8 h-full">
@@ -103,12 +118,12 @@ const PersonasSlide = () => (
             
             {/* Content */}
             <div className="relative z-10 space-y-6">
-              {/* Avatar photo */}
-              <div className="w-24 h-24 mx-auto rounded-2xl overflow-hidden shadow-glow border-2 border-white/20">
+              {/* Phoenix Icon */}
+              <div className="w-24 h-24 mx-auto rounded-2xl overflow-hidden shadow-glow border-2 border-white/20 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 flex items-center justify-center">
                 <img 
-                  src="/lovable-uploads/d6d8d0a5-7fd3-4a76-88f4-3a8c2201f724.png" 
-                  alt="Luan Ferreira" 
-                  className="w-full h-full object-cover"
+                  src="/phoenix-neon-icon.png" 
+                  alt="Phoenix Icon" 
+                  className="w-16 h-16 object-contain"
                 />
               </div>
               
@@ -190,6 +205,372 @@ const PersonasSlide = () => (
             <p className="text-sm text-card-foreground leading-relaxed">
               Entregar, junto com a equipe, uma solução sólida, bem estruturada e totalmente alinhada ao 
               problema apresentado — do código ao uso final.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
+const AlexsandroSlide = () => (
+  <div className="space-y-8">
+    <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-accent bg-clip-text text-transparent">
+      Alexsandro Luz - Arquiteto & Visionário Tecnológico
+    </h2>
+    
+    <div className="grid grid-cols-5 gap-8 h-full">
+      {/* Main Profile Card */}
+      <div className="col-span-2 flex justify-center items-start">
+        <div className="relative">
+          {/* Outer glow effect */}
+          <div className="absolute inset-0 bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 opacity-30 blur-2xl rounded-3xl scale-110"></div>
+          
+          {/* Main card with neon border effect */}
+          <div className="relative bg-gradient-to-br from-background via-card to-background rounded-3xl p-8 text-center min-w-[300px]">
+            {/* Triple neon border effect */}
+            <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 p-[3px]">
+              <div className="absolute inset-[3px] rounded-3xl bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 p-[2px]">
+                <div className="absolute inset-[2px] rounded-3xl bg-gradient-to-br from-background via-card to-background"></div>
+              </div>
+            </div>
+            
+            {/* Inner glow */}
+            <div className="absolute inset-[6px] rounded-3xl bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10"></div>
+            
+            {/* Content */}
+            <div className="relative z-10 space-y-6">
+              {/* Phoenix Icon */}
+              <div className="w-24 h-24 mx-auto rounded-2xl overflow-hidden shadow-glow border-2 border-white/20 bg-gradient-to-br from-orange-500/20 to-pink-500/20 flex items-center justify-center">
+                <img 
+                  src="/phoenix-neon-icon.png" 
+                  alt="Phoenix Icon" 
+                  className="w-16 h-16 object-contain"
+                />
+              </div>
+              
+              <div className="space-y-4">
+                <h3 className="text-3xl font-bold text-foreground">Alexsandro Luz</h3>
+                <p className="text-xl text-primary font-medium">Arquiteto de Soluções</p>
+                <div className="w-16 h-0.5 bg-gradient-to-r from-orange-500 to-pink-500 mx-auto"></div>
+                <div className="space-y-2">
+                  <p className="text-2xl font-light text-foreground">31 anos</p>
+                  <p className="text-lg text-muted-foreground">Desenvolvedor</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Info Cards Grid */}
+      <div className="col-span-3 grid grid-cols-2 gap-6">
+        <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-6 hover:bg-card/50 transition-all duration-300">
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-1 h-6 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full"></div>
+              <h4 className="text-lg font-semibold text-primary">Perfil</h4>
+            </div>
+            <p className="text-sm text-card-foreground leading-relaxed">
+              Sou formado em Ciência de Dados, estudante de Engenharia de Machine Learning. 
+              Com mais de 8 anos de experiência em desenvolvimento de software e arquiteturas escaláveis, 
+              atuo como arquiteto de soluções liderando iniciativas tecnológicas que alinham inovação, 
+              performance e impacto real nos negócios.
+            </p>
+          </div>
+        </div>
+
+        <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-6 hover:bg-card/50 transition-all duration-300">
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-1 h-6 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full"></div>
+              <h4 className="text-lg font-semibold text-primary">Motivações e Objetivos</h4>
+            </div>
+            <p className="text-sm text-card-foreground leading-relaxed">
+              Sou movido por desafios e acredito que a tecnologia bem aplicada é a chave para resolver 
+              grandes problemas sociais, ambientais e econômicos. Minha motivação está em criar soluções 
+              que gerem valor real e impactem positivamente a vida das pessoas.
+            </p>
+          </div>
+        </div>
+
+        <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-6 hover:bg-card/50 transition-all duration-300">
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-1 h-6 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full"></div>
+              <h4 className="text-lg font-semibold text-primary">Interesse</h4>
+            </div>
+            <p className="text-sm text-card-foreground leading-relaxed">
+              Tenho interesse em gerar impacto transformando o mundo através da tecnologia, 
+              simplificando processos e entregando soluções que possam impactar e facilitar 
+              a vida de quem vai usá-las.
+            </p>
+          </div>
+        </div>
+
+        <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-6 hover:bg-card/50 transition-all duration-300">
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-1 h-6 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full"></div>
+              <h4 className="text-lg font-semibold text-primary">Desafio</h4>
+            </div>
+            <p className="text-sm text-card-foreground leading-relaxed">
+              Quebrar as barreiras através da constante inovação transformando ideias em soluções.
+            </p>
+          </div>
+        </div>
+
+        <div className="col-span-2 bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-6 hover:bg-card/50 transition-all duration-300">
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-1 h-6 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full"></div>
+              <h4 className="text-lg font-semibold text-primary">Expectativa</h4>
+            </div>
+            <p className="text-sm text-card-foreground leading-relaxed">
+              Entregar uma solução prática e intuitiva que consiga conversar de forma clara com o usuário, 
+              e levar minha equipe para a vitória.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
+const ThiagoSlide = () => (
+  <div className="space-y-8">
+    <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-accent bg-clip-text text-transparent">
+      Thiago Santos - Analista de Sistemas
+    </h2>
+    
+    <div className="grid grid-cols-5 gap-8 h-full">
+      {/* Main Profile Card */}
+      <div className="col-span-2 flex justify-center items-start">
+        <div className="relative">
+          {/* Outer glow effect */}
+          <div className="absolute inset-0 bg-gradient-to-r from-green-500 via-teal-500 to-blue-500 opacity-30 blur-2xl rounded-3xl scale-110"></div>
+          
+          {/* Main card with neon border effect */}
+          <div className="relative bg-gradient-to-br from-background via-card to-background rounded-3xl p-8 text-center min-w-[300px]">
+            {/* Triple neon border effect */}
+            <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-green-500 via-teal-500 to-blue-500 p-[3px]">
+              <div className="absolute inset-[3px] rounded-3xl bg-gradient-to-r from-green-400 via-teal-400 to-blue-400 p-[2px]">
+                <div className="absolute inset-[2px] rounded-3xl bg-gradient-to-br from-background via-card to-background"></div>
+              </div>
+            </div>
+            
+            {/* Inner glow */}
+            <div className="absolute inset-[6px] rounded-3xl bg-gradient-to-r from-green-500/10 via-teal-500/10 to-blue-500/10"></div>
+            
+            {/* Content */}
+            <div className="relative z-10 space-y-6">
+              {/* Phoenix Icon */}
+              <div className="w-24 h-24 mx-auto rounded-2xl overflow-hidden shadow-glow border-2 border-white/20 bg-gradient-to-br from-green-500/20 to-blue-500/20 flex items-center justify-center">
+                <img 
+                  src="/phoenix-neon-icon.png" 
+                  alt="Phoenix Icon" 
+                  className="w-16 h-16 object-contain"
+                />
+              </div>
+              
+              <div className="space-y-4">
+                <h3 className="text-3xl font-bold text-foreground">Thiago Santos</h3>
+                <p className="text-xl text-primary font-medium">Analista de Sistemas</p>
+                <div className="w-16 h-0.5 bg-gradient-to-r from-green-500 to-blue-500 mx-auto"></div>
+                <div className="space-y-2">
+                  <p className="text-2xl font-light text-foreground">28 anos</p>
+                  <p className="text-lg text-muted-foreground">Desenvolvedor</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Info Cards Grid */}
+      <div className="col-span-3 grid grid-cols-2 gap-6">
+        <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-6 hover:bg-card/50 transition-all duration-300">
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-1 h-6 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></div>
+              <h4 className="text-lg font-semibold text-primary">Perfil</h4>
+            </div>
+            <p className="text-sm text-card-foreground leading-relaxed">
+              Natural de Salvador/BA, formado em Análise e Desenvolvimento de Sistemas, 
+              com duas pós-graduações na área de tecnologia e estudante de Ciências da Computação. 
+              Atuo como analista de sistemas projetando e implementando redes, sistemas de sonorização, 
+              elétrica e segurança eletrônica.
+            </p>
+          </div>
+        </div>
+
+        <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-6 hover:bg-card/50 transition-all duration-300">
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-1 h-6 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></div>
+              <h4 className="text-lg font-semibold text-primary">Motivações e Objetivos</h4>
+            </div>
+            <p className="text-sm text-card-foreground leading-relaxed">
+              Aplicar minhas skills de desenvolvimento de sistemas e resolução de problemas. 
+              Estou sempre em movimento e meu intuitivo majoritário é aprender com as consequências 
+              do meu esforço e o da equipe, e fundir a Fênix ao Atom!
+            </p>
+          </div>
+        </div>
+
+        <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-6 hover:bg-card/50 transition-all duration-300">
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-1 h-6 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></div>
+              <h4 className="text-lg font-semibold text-primary">Interesse</h4>
+            </div>
+            <p className="text-sm text-card-foreground leading-relaxed">
+              Aprender, evoluir e conectar.
+            </p>
+          </div>
+        </div>
+
+        <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-6 hover:bg-card/50 transition-all duration-300">
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-1 h-6 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></div>
+              <h4 className="text-lg font-semibold text-primary">Desafio</h4>
+            </div>
+            <p className="text-sm text-card-foreground leading-relaxed">
+              Conectar os pontos desse novo contexto e trazer a revolução que impulsiona.
+            </p>
+          </div>
+        </div>
+
+        <div className="col-span-2 bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-6 hover:bg-card/50 transition-all duration-300">
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-1 h-6 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></div>
+              <h4 className="text-lg font-semibold text-primary">Expectativa</h4>
+            </div>
+            <p className="text-sm text-card-foreground leading-relaxed">
+              Vencer e me tornar um gigante, fluir ideias e transformar esse universo deixando a marca da Fênix nele!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
+const RonaldoSlide = () => (
+  <div className="space-y-8">
+    <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-accent bg-clip-text text-transparent">
+      Ronaldo Dominguez - Analista & Engenheiro de Software
+    </h2>
+    
+    <div className="grid grid-cols-5 gap-8 h-full">
+      {/* Main Profile Card */}
+      <div className="col-span-2 flex justify-center items-start">
+        <div className="relative">
+          {/* Outer glow effect */}
+          <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-500 opacity-30 blur-2xl rounded-3xl scale-110"></div>
+          
+          {/* Main card with neon border effect */}
+          <div className="relative bg-gradient-to-br from-background via-card to-background rounded-3xl p-8 text-center min-w-[300px]">
+            {/* Triple neon border effect */}
+            <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-500 p-[3px]">
+              <div className="absolute inset-[3px] rounded-3xl bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400 p-[2px]">
+                <div className="absolute inset-[2px] rounded-3xl bg-gradient-to-br from-background via-card to-background"></div>
+              </div>
+            </div>
+            
+            {/* Inner glow */}
+            <div className="absolute inset-[6px] rounded-3xl bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-cyan-500/10"></div>
+            
+            {/* Content */}
+            <div className="relative z-10 space-y-6">
+              {/* Phoenix Icon */}
+              <div className="w-24 h-24 mx-auto rounded-2xl overflow-hidden shadow-glow border-2 border-white/20 bg-gradient-to-br from-indigo-500/20 to-cyan-500/20 flex items-center justify-center">
+                <img 
+                  src="/phoenix-neon-icon.png" 
+                  alt="Phoenix Icon" 
+                  className="w-16 h-16 object-contain"
+                />
+              </div>
+              
+              <div className="space-y-4">
+                <h3 className="text-3xl font-bold text-foreground">Ronaldo Dominguez</h3>
+                <p className="text-xl text-primary font-medium">Analista Desenvolvedor</p>
+                <div className="w-16 h-0.5 bg-gradient-to-r from-indigo-500 to-cyan-500 mx-auto"></div>
+                <div className="space-y-2">
+                  <p className="text-2xl font-light text-foreground">25 anos</p>
+                  <p className="text-lg text-muted-foreground">Desenvolvedor</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Info Cards Grid */}
+      <div className="col-span-3 grid grid-cols-2 gap-6">
+        <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-6 hover:bg-card/50 transition-all duration-300">
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-1 h-6 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-full"></div>
+              <h4 className="text-lg font-semibold text-primary">Perfil</h4>
+            </div>
+            <p className="text-sm text-card-foreground leading-relaxed">
+              Sou desenvolvedor com foco em backend e atualmente em desenvolvimento como arquiteto de software. 
+              Trabalho remotamente desde a Espanha em projetos desafiadores, sempre buscando entregar soluções 
+              eficientes, evoluir tecnicamente e contribuir para o crescimento das equipes.
+            </p>
+          </div>
+        </div>
+
+        <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-6 hover:bg-card/50 transition-all duration-300">
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-1 h-6 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-full"></div>
+              <h4 className="text-lg font-semibold text-primary">Motivações e Objetivos</h4>
+            </div>
+            <p className="text-sm text-card-foreground leading-relaxed">
+              Transformar desafios técnicos em soluções inteligentes e eficientes. 
+              Aprendo com cada obstáculo e colaboro para construir times fortes, 
+              com entrega de valor contínuo e inovação.
+            </p>
+          </div>
+        </div>
+
+        <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-6 hover:bg-card/50 transition-all duration-300">
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-1 h-6 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-full"></div>
+              <h4 className="text-lg font-semibold text-primary">Interesse</h4>
+            </div>
+            <p className="text-sm text-card-foreground leading-relaxed">
+              Aprender, construir e impactar.
+            </p>
+          </div>
+        </div>
+
+        <div className="bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-6 hover:bg-card/50 transition-all duration-300">
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-1 h-6 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-full"></div>
+              <h4 className="text-lg font-semibold text-primary">Desafio</h4>
+            </div>
+            <p className="text-sm text-card-foreground leading-relaxed">
+              Conectar ideias, liderar soluções e crescer com propósito em meio à complexidade.
+            </p>
+          </div>
+        </div>
+
+        <div className="col-span-2 bg-card/30 backdrop-blur-sm border border-border/50 rounded-xl p-6 hover:bg-card/50 transition-all duration-300">
+          <div className="space-y-4">
+            <div className="flex items-center space-x-2">
+              <div className="w-1 h-6 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-full"></div>
+              <h4 className="text-lg font-semibold text-primary">Expectativa</h4>
+            </div>
+            <p className="text-sm text-card-foreground leading-relaxed">
+              Como a Fênix que renasce das cinzas, quero evoluir constantemente, superar limites 
+              e deixar minha marca onde a inovação acontece.
             </p>
           </div>
         </div>
@@ -404,8 +785,7 @@ const DefinitionOfDoneSlide = () => {
 const SprintsSlide = () => {
   const sprints = [
     {
-      name: "Sprint Planning",
-      objective: "Setup e Organização",
+      name: "Setup e Organização",
       tasks: [
         "Definir arquitetura e tecnologias",
         "Criar repositório no GitHub",
@@ -416,8 +796,7 @@ const SprintsSlide = () => {
       ]
     },
     {
-      name: "Sprint 1",
-      objective: "Smart Contracts + Frontend Base",
+      name: "Smart Contracts + Frontend Base",
       tasks: [
         "Implementar contrato base (SwapBook)",
         "Criar funções: createSwap, swapTokens",
@@ -427,8 +806,7 @@ const SprintsSlide = () => {
       ]
     },
     {
-      name: "Sprint 2",
-      objective: "Integrações e Lógica de Swap",
+      name: "Integrações e Lógica de Swap",
       tasks: [
         "Integração Chainlink (oracle de preço)",
         "Testes em testnet (Mumbai)",
@@ -438,8 +816,7 @@ const SprintsSlide = () => {
       ]
     },
     {
-      name: "Sprint 3",
-      objective: "Dashboard + Refino de Contratos",
+      name: "Dashboard + Refino de Contratos",
       tasks: [
         "Exibir volume de swaps e histórico",
         "Indexar eventos de contrato",
@@ -449,8 +826,7 @@ const SprintsSlide = () => {
       ]
     },
     {
-      name: "Sprint 4",
-      objective: "Testes Finais + Deploy",
+      name: "Testes Finais + Deploy",
       tasks: [
         "Testes ponta a ponta",
         "Deploy do contrato na testnet",
@@ -461,8 +837,7 @@ const SprintsSlide = () => {
       ]
     },
     {
-      name: "Sprint 5",
-      objective: "Entrega Oficial",
+      name: "Entrega Oficial",
       tasks: [
         "Submeter projeto na plataforma",
         "Finalizar checklist do edital",
@@ -505,7 +880,6 @@ const SprintsSlide = () => {
                     {index + 1}
                   </div>
                   <h3 className="text-lg font-bold text-foreground">{sprint.name}</h3>
-                  <p className="text-sm text-primary font-medium">{sprint.objective}</p>
                   <div className="w-16 h-0.5 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full mx-auto"></div>
                 </div>
 
@@ -548,7 +922,6 @@ const SprintsSlide = () => {
                     {index + 4}
                   </div>
                   <h3 className="text-lg font-bold text-foreground">{sprint.name}</h3>
-                  <p className="text-sm text-primary font-medium">{sprint.objective}</p>
                   <div className="w-16 h-0.5 bg-gradient-to-r from-orange-500 to-pink-500 rounded-full mx-auto"></div>
                 </div>
 
@@ -573,143 +946,126 @@ const SprintsSlide = () => {
 };
 
 const BurndownSlide = () => {
-  const burndownData = [
+  const roadmapSteps = [
     { 
-      sprint: "Sprint Planning", 
+      name: "Setup e Organização",
       period: "08 a 11 de Julho",
-      progress: 100, 
-      status: "Concluído",
-      color: "from-emerald-500 to-green-400"
+      completed: true
     },
     { 
-      sprint: "Sprint 1", 
+      name: "Smart Contracts + Frontend Base",
       period: "12 a 18 de Julho",
-      progress: 85, 
-      status: "Em Andamento",
-      color: "from-blue-500 to-cyan-400"
+      completed: false
     },
     { 
-      sprint: "Sprint 2", 
+      name: "Integrações e Lógica de Swap",
       period: "19 a 25 de Julho",
-      progress: 60, 
-      status: "Planejado",
-      color: "from-purple-500 to-pink-400"
+      completed: false
     },
     { 
-      sprint: "Sprint 3", 
+      name: "Dashboard + Refino de Contratos",
       period: "26 de Julho a 01 de Agosto",
-      progress: 40, 
-      status: "Planejado",
-      color: "from-orange-500 to-red-400"
+      completed: false
     },
     { 
-      sprint: "Sprint 4", 
+      name: "Testes Finais + Deploy",
       period: "02 a 07 de Agosto",
-      progress: 20, 
-      status: "Futuro",
-      color: "from-indigo-500 to-purple-400"
+      completed: false
     },
     { 
-      sprint: "Sprint 5", 
+      name: "Entrega Oficial",
       period: "08 e 09 de Agosto",
-      progress: 0, 
-      status: "Futuro",
-      color: "from-pink-500 to-rose-400"
+      completed: false
     }
   ];
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-12">
       <div className="text-center space-y-4">
         <h2 className="text-4xl font-bold bg-gradient-accent bg-clip-text text-transparent">
-          Cronograma & Progresso
+          Cronograma
         </h2>
         <div className="w-24 h-1 bg-gradient-accent mx-auto rounded-full"></div>
-        <p className="text-muted-foreground">Timeline de Desenvolvimento com Datas e Status</p>
+        <p className="text-muted-foreground">Roadmap Vertical do Projeto</p>
       </div>
       
-      <div className="grid grid-cols-2 gap-6">
-        {burndownData.map((item, index) => (
-          <div key={index} className="relative group">
-            {/* Holographic glow */}
-            <div className={`absolute inset-0 bg-gradient-to-r ${item.color} opacity-20 blur-xl rounded-2xl scale-105 group-hover:opacity-30 transition-all duration-500`}></div>
-            
-            {/* Main container */}
-            <div className="relative bg-gradient-to-br from-background/90 via-card/70 to-background/90 backdrop-blur-sm border border-border/40 rounded-2xl p-6">
-              {/* Animated border */}
-              <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${item.color} p-[2px] opacity-60 group-hover:opacity-100 transition-opacity duration-500`}>
-                <div className="absolute inset-[2px] rounded-2xl bg-gradient-to-br from-background via-card to-background"></div>
-              </div>
+      {/* Vertical Timeline */}
+      <div className="relative flex flex-col items-center space-y-8 py-8">
+        {/* Vertical neon line */}
+        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-transparent via-muted to-transparent"></div>
+        
+        {roadmapSteps.map((step, index) => (
+          <div key={index} className="relative flex items-center w-full max-w-4xl">
+            {/* Center connector */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 z-20">
+              {/* Neon glow effect for completed step */}
+              {step.completed && (
+                <div className="absolute inset-0 w-6 h-6 bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 rounded-full blur-md opacity-80"></div>
+              )}
               
-              {/* Content */}
-              <div className="relative z-10 space-y-6">
-                {/* Header */}
-                <div className="flex items-center justify-between">
-                  <div className="space-y-1">
-                    <h3 className="text-lg font-bold text-foreground">{item.sprint}</h3>
-                    <p className="text-sm text-muted-foreground">{item.period}</p>
+              {/* Main circle */}
+              <div className={`w-6 h-6 rounded-full border-4 relative z-10 ${
+                step.completed 
+                  ? 'bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 border-white shadow-[0_0_20px_rgba(168,85,247,0.8)]' 
+                  : 'bg-muted border-muted-foreground/50'
+              }`}>
+                {step.completed && (
+                  <div className="absolute inset-1 bg-white rounded-full flex items-center justify-center">
+                    <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full"></div>
                   </div>
-                  <div className={`px-3 py-1 rounded-full bg-gradient-to-r ${item.color} text-white text-xs font-medium`}>
-                    {item.status}
-                  </div>
-                </div>
-
-                {/* Progress visualization */}
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center">
-                    <span className="text-sm text-card-foreground">Progresso Estimado</span>
-                    <span className="text-sm font-bold text-foreground">{item.progress}%</span>
-                  </div>
+                )}
+              </div>
+            </div>
+            
+            {/* Content card */}
+            <div className={`w-80 ${index % 2 === 0 ? 'mr-auto pr-12' : 'ml-auto pl-12'}`}>
+              <div className="relative group">
+                {/* Glow effect for completed steps */}
+                {step.completed && (
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-pink-500/20 to-cyan-500/20 blur-xl rounded-2xl scale-105 opacity-80"></div>
+                )}
+                
+                {/* Main card */}
+                <div className={`relative rounded-2xl p-6 backdrop-blur-sm border transition-all duration-500 ${
+                  step.completed 
+                    ? 'bg-gradient-to-br from-background/90 via-card/80 to-background/90 border-primary/30 shadow-glow' 
+                    : 'bg-card/30 border-border/30 hover:bg-card/50'
+                }`}>
                   
-                  {/* Progress bar with glow effect */}
-                  <div className="relative">
-                    <div className="w-full bg-secondary/50 rounded-full h-3 overflow-hidden">
-                      <div 
-                        className={`bg-gradient-to-r ${item.color} h-3 rounded-full transition-all duration-700 relative`}
-                        style={{ width: `${item.progress}%` }}
-                      >
-                        {/* Inner glow */}
-                        <div className="absolute inset-0 bg-white/20 rounded-full"></div>
-                      </div>
+                  {/* Animated border for completed steps */}
+                  {step.completed && (
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 p-[2px] opacity-60">
+                      <div className="absolute inset-[2px] rounded-2xl bg-gradient-to-br from-background via-card to-background"></div>
                     </div>
-                    {/* Outer glow */}
-                    <div 
-                      className={`absolute top-0 left-0 bg-gradient-to-r ${item.color} h-3 rounded-full opacity-30 blur-sm transition-all duration-700`}
-                      style={{ width: `${item.progress}%` }}
-                    ></div>
+                  )}
+                  
+                  <div className="relative z-10 space-y-3">
+                    <h3 className={`text-lg font-bold ${step.completed ? 'text-foreground' : 'text-muted-foreground'}`}>
+                      {step.name}
+                    </h3>
+                    <p className={`text-sm ${step.completed ? 'text-primary font-medium' : 'text-muted-foreground'}`}>
+                      {step.period}
+                    </p>
+                    
+                    {step.completed && (
+                      <div className="flex items-center space-x-2 pt-2">
+                        <div className="w-2 h-2 bg-gradient-to-r from-green-500 to-emerald-400 rounded-full shadow-sm"></div>
+                        <span className="text-xs text-green-500 font-medium">Concluído</span>
+                      </div>
+                    )}
                   </div>
-                </div>
-
-                {/* Status indicators */}
-                <div className="flex items-center space-x-2">
-                  <div className={`w-3 h-3 rounded-full bg-gradient-to-r ${item.color} shadow-lg`}></div>
-                  <span className="text-xs text-muted-foreground">
-                    {item.progress === 100 ? "Finalizado" : 
-                     item.progress > 0 ? "Em desenvolvimento" : "Aguardando início"}
-                  </span>
                 </div>
               </div>
             </div>
           </div>
         ))}
-      </div>
-      
-      {/* Timeline visualization */}
-      <div className="mt-8 p-6 rounded-2xl bg-gradient-to-r from-background/50 via-card/30 to-background/50 backdrop-blur-sm border border-border/30">
-        <h3 className="text-xl font-bold text-center text-foreground mb-6">Timeline Geral do Projeto</h3>
-        <div className="flex items-center justify-between relative">
-          {/* Timeline line */}
-          <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-accent rounded-full"></div>
-          
-          {burndownData.map((item, index) => (
-            <div key={index} className="relative flex flex-col items-center z-10">
-              <div className={`w-4 h-4 rounded-full bg-gradient-to-r ${item.color} border-2 border-background shadow-lg mb-2`}></div>
-              <div className="text-center">
-                <p className="text-xs font-medium text-foreground">{item.sprint}</p>
-                <p className="text-xs text-muted-foreground">{item.period.split(' a ')[0]}</p>
-              </div>
-            </div>
-          ))}
+        
+        {/* Glowing line for completed section */}
+        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-purple-500 via-pink-500 to-cyan-500 shadow-[0_0_10px_rgba(168,85,247,0.6)]" 
+             style={{ 
+               height: `${(100 / roadmapSteps.length) * roadmapSteps.findIndex(step => !step.completed)}%`,
+               top: '0px'
+             }}>
         </div>
       </div>
     </div>
@@ -733,6 +1089,9 @@ const Presentation = () => {
       case "CoverSlide": return <CoverSlide />;
       case "ProblemSlide": return <ProblemSlide />;
       case "PersonasSlide": return <PersonasSlide />;
+      case "AlexsandroSlide": return <AlexsandroSlide />;
+      case "ThiagoSlide": return <ThiagoSlide />;
+      case "RonaldoSlide": return <RonaldoSlide />;
       case "UserStoriesSlide": return <UserStoriesSlide />;
       case "DefinitionOfDoneSlide": return <DefinitionOfDoneSlide />;
       case "SprintsSlide": return <SprintsSlide />;
