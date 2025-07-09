@@ -208,7 +208,7 @@ const AlexsandroSlide = () => <div className="space-y-6 lg:space-y-8">
             <div className="relative z-10 space-y-4 lg:space-y-6">
               {/* Profile Photo */}
               <div className="w-20 h-20 lg:w-24 lg:h-24 mx-auto rounded-2xl overflow-hidden shadow-glow border-2 border-white/20 bg-gradient-to-br from-orange-500/20 to-pink-500/20">
-                <img src="/lovable-uploads/317428f5-3738-4cc6-ab0b-6a536ff3e207.png" alt="Alexsandro Luz" className="w-full h-full object-cover" />
+                <img alt="Alexsandro Luz" className="w-full h-full object-cover" src="/lovable-uploads/e6e0dbc8-5fc2-4890-aff4-95da4d951b1e.png" />
               </div>
               
               <div className="space-y-3 lg:space-y-4">
